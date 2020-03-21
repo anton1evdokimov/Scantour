@@ -3,15 +3,85 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Подключаем Bootstrap JS -->
+    <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
     <title>СканТур</title>
 </head>
 
 <body>
+    <header class="main-header container-lg">
+        <img src="./img/logo.png" alt="" width="213">
+        <div class="geo">
+            <img src="./img/geo.svg" alt="">
+            <spnan class="location">
+                Санкт-Петербург
+            </spnan>
+        </div>
+        <nav class="navbar" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu-item" href="#">Главная</a></li>
+                        <li><a class="menu-item" href="#">Сервис и оплата</a></li>
+                        <li><a class="menu-item" href="#">Компания</a></li>
+                        <li><a class="menu-item" href="#">Агентствам</a></li>
+                        <li><a class="menu-item" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="phone">
+            <span class="phone-label">Бесплатно по РФ</span>
+            <div class="phone-number">
+                <span>8(800) 555 64 63</span>
+                <img src="./img/vector.svg " alt=" ">
+            </div>
+        </div>
+        <div class="login ">
+            <a href="# ">Вход</a> | <a href="# ">Регистрация</a>
+        </div>
+    </header>
+    <main class="container-lg">
+        <main class="row ">
+            <aside class="col-md-4 left-menu ">
+                <img src="./img/menu.svg " alt="Меню ">
+                <span class="heading ">
+                    Каталог туров
+                </span>
+            </aside>
+            <section class="col-md-8 main-content">
+                <div class="heading ">
+                    Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="main-image"></div>
+                        <div class="row">
+                            <div class="left-image col-md-6"></div>
+                            <div class="right-image col-md-6"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
 
+                    </div>
+                </div>
+                <img src="./img/main.png" alt="">
+            </section>
+        </main>
+    </main>
 </body>
 
 </html>
