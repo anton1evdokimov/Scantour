@@ -11,6 +11,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
     <title>СканТур</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
 </head>
 
 <body>
@@ -54,33 +55,45 @@
             <a href="# ">Вход</a> | <a href="# ">Регистрация</a>
         </div>
     </header>
-    <main class="container-lg">
-        <main class="row ">
-            <aside class="col-md-4 left-menu ">
+    <main class="container-lg row main-row">
+        <aside class="col-md-3 left-menu ">
+            <div class="catalog">
                 <img src="./img/menu.svg " alt="Меню ">
                 <span class="heading ">
                     Каталог туров
                 </span>
-            </aside>
-            <section class="col-md-8 main-content">
-                <div class="heading ">
-                    Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="main-image"></div>
-                        <div class="row">
-                            <div class="left-image col-md-6"></div>
-                            <div class="right-image col-md-6"></div>
+            </div>
+        </aside>
+        <section class="col-md-9 main-content">
+            <div class="heading ">
+                Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
+            </div>
+            <div class="row inner-row">
+                <div class="col-md-9">
+                    <div class="main-image">
+                        <div class="main-slider">
+                            <img src="./img/left-arrow.svg" alt="" class="toggle-slider">
+                            <img src="./img/right-arrow.svg" alt="" class="toggle-slider">
+                            <div class="slider-description">
+                                <span class="main-text">Широкая Масленица в традиционной Заонежской деревне</span><br>
+                                <span class="other-text">Остров Кижи, дер. Мандроги, Витославлицы</span>
+                                <a href="#" class="goto-link"><img src="./img/goto.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-
+                    <div class="row image-row">
+                        <div class="left-image col-md-6">
+                            <span class="main-text">Туры для групп</span>
+                            <button type="button" class="red-button">Заказать</button>
+                        </div>
+                        <div class="right-image col-md-6 "></div>
                     </div>
                 </div>
-                <img src="./img/main.png" alt="">
-            </section>
-        </main>
+                <div class="col-md-3 ">
+
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
