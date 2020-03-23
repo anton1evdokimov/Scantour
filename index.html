@@ -19,9 +19,9 @@
         <img src="./img/logo.png" alt="" width="213">
         <div class="geo">
             <img src="./img/geo.svg" alt="">
-            <spnan class="location">
-                Санкт-Петербург
-            </spnan>
+            <span class="location">
+                <a href="#">Санкт-Петербург</a>
+            </span>
         </div>
         <nav class="navbar" role="navigation">
             <div class="container-fluid">
@@ -57,20 +57,34 @@
     </header>
     <main class="container-lg row main-row">
         <aside class="col-md-3 left-menu ">
-            <div class="catalog">
+            <div class="left-menu__header">
                 <img src="./img/menu.svg " alt="Меню ">
-                <span class="heading ">
-                    Каталог туров
-                </span>
+                <span class="heading ">Каталог туров</span>
             </div>
+            <section class="left-menu__nav">
+                <ul>
+                    <li class="left-menu__nav__location">Карелия</li>
+                    <li class="left-menu__nav__location">Ленинградская область</li>
+                    <li class="left-menu__nav__location">Новгород</li>
+                    <li class="left-menu__nav__location">Псков</li>
+                    <li class="left-menu__nav__location">Вологда</li>
+                    <li class="left-menu__nav__location">Тверь</li>
+                    <li class="left-menu__nav__location">Золотое кольцо</li>
+                    <li class="left-menu__nav__location">Калининград</li>
+                    <li class="left-menu__nav__location">Бесплатная Финляндия</li>
+                    <li class="left-menu__nav__location">Туры для групп</li>
+                    <li class="left-menu__nav__location">События</li>
+                </ul>
+            </section>
+
         </aside>
         <section class="col-md-9 main-content">
             <div class="heading ">
                 Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
             </div>
-            <div class="row inner-row">
+            <div class="row">
                 <div class="col-md-9">
-                    <div class="main-image">
+                    <div class="main-content__main-image">
                         <div class="main-slider">
                             <img src="./img/left-arrow.svg" alt="" class="toggle-slider">
                             <img src="./img/right-arrow.svg" alt="" class="toggle-slider">
@@ -81,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row image-row">
+                    <div class="row main-content__image-row">
                         <div class="left-image col-md-6">
                             <span class="main-text">Туры для групп</span>
                             <button type="button" class="red-button">Заказать</button>
@@ -89,8 +103,34 @@
                         <div class="right-image col-md-6 "></div>
                     </div>
                 </div>
-                <div class="col-md-3 ">
-
+                <div class="col-md-3 main-content__left-column">
+                    <div class="main-content__left-column__item">
+                        <a href="#">🔥&nbsp;&nbsp;Горящие туры</a>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">❤️&nbsp;День святого Валентина</a>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Карелия на 1 день</a><span class="price"> от 1490&nbsp;₽</span>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Карелия на 3 дня</a><span class="price"> от 4650&nbsp;₽</span>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Карелия на 2-8 дней</a><span class="price">от 4650&nbsp;₽</span>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Ленобласть</a><span class="price">от 1490&nbsp;₽</span>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Новгород</a><span class="price">от 1790&nbsp;₽</span>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Псков</a><span class="price">от 2090&nbsp;₽</span>
+                    </div>
+                    <div class="main-content__left-column__item">
+                        <a href="#">Вологда</a><span class="price">от 17090&nbsp;₽</span>
+                    </div>
                 </div>
             </div>
         </section>
