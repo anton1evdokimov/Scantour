@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- Подключаем Bootstrap JS -->
     <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
@@ -17,23 +19,109 @@
 <body>
     <div class="page">
         <aside class="left-menu">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="#calendar" data-toggle="tab">Active</a>
+            <ul class="nav nav-tabs" id="left-menu">
+                <li class="nav-item active">
+                    <a data-toggle="tab" href="#menu">
+                        <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 0.5C0 0.223858 0.223858 0 0.5 0H26.0655C26.3417 0 26.5655 0.223858 26.5655 0.5C26.5655 0.776142 26.3417 1 26.0655 1H0.5C0.223858 1 0 0.776142 0 0.5ZM0 8.96783C0 8.69169 0.223858 8.46783 0.5 8.46783H26.0655C26.3417 8.46783 26.5655 8.69169 26.5655 8.96783C26.5655 9.24398 26.3417 9.46783 26.0655 9.46783H0.5C0.223858 9.46783 0 9.24398 0 8.96783ZM0.5 16.936C0.223858 16.936 0 17.1599 0 17.436C0 17.7122 0.223858 17.936 0.5 17.936H26.0655C26.3417 17.936 26.5655 17.7122 26.5655 17.436C26.5655 17.1599 26.3417 16.936 26.0655 16.936H0.5Z" />
+                        </svg>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#menu" data-toggle="tab">Link</a>
+                    <a data-toggle="tab" href="#calendar">
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.1 0.5C17.1 0.223858 16.8762 0 16.6 0C16.3239 0 16.1 0.223858 16.1 0.5V2.46107H7.19168V0.5C7.19168 0.223858 6.96782 0 6.69168 0C6.41554 0 6.19168 0.223858 6.19168 0.5V2.46107H2.97693C1.33581 2.46107 0 3.78391 0 5.42238V10.3449V22.6515C0 24.29 1.33581 25.6128 2.97693 25.6128H20.3155C21.9566 25.6128 23.2924 24.29 23.2924 22.6515V10.3449V5.42238C23.2924 3.78391 21.9566 2.46107 20.3155 2.46107H17.1V0.5ZM22.2924 9.8449V5.42238C22.2924 4.34216 21.4103 3.46107 20.3155 3.46107H17.1V5.42261C17.1 5.69875 16.8762 5.92261 16.6 5.92261C16.3239 5.92261 16.1 5.69875 16.1 5.42261V3.46107H7.19168V5.42261C7.19168 5.69875 6.96782 5.92261 6.69168 5.92261C6.41554 5.92261 6.19168 5.69875 6.19168 5.42261V3.46107H2.97693C1.88212 3.46107 1 4.34216 1 5.42238V9.8449H22.2924ZM1 10.8449H22.2924V22.6515C22.2924 23.7317 21.4103 24.6128 20.3155 24.6128H2.97693C1.88212 24.6128 1 23.7317 1 22.6515V10.8449Z" />
+                        </svg>
+                    </a>
                 </li>
             </ul>
             <div class="tab-content left-menu">
-                <div class="tab-pane" id="calendar">
-
-                </div>
-                <div class="tab-pane active" id="menu">
-                    <section class="left-menu__header">
-                        <img src="./img/menu.svg " alt="Каталог туров" title="Каталог туров">
-                        <strong class="heading ">Каталог туров</strong>
+                <div class="tab-pane active" id="calendar">
+                    <div class="left-menu__calendar">Ближайшие рейсы (12.05)</div>
+                    <section class="left-menu__nav">
+                        <ul>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span> Карелия
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
+                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
+                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
+                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span> Ленинградская область
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
+                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
+                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
+                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span> Новгород
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
+                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
+                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
+                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span> Псков
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
+                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
+                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
+                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
+                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
+                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location">Вологда</li>
+                            <li class="left-menu__nav__location">Тверь</li>
+                            <li class="left-menu__nav__location">Золотое кольцо</li>
+                            <li class="left-menu__nav__location">Калининград</li>
+                            <li class="left-menu__nav__location">Бесплатная Финляндия</li>
+                            <li class="left-menu__nav__location">Туры для групп</li>
+                            <li class="left-menu__nav__location">События</li>
+                        </ul>
                     </section>
+                </div>
+                <div class="tab-pane " id="menu">
+                    <div class="left-menu__header">🔥 Горящие туры</div>
                     <section class="left-menu__nav">
                         <ul>
                             <li class="left-menu__nav__location plus">
@@ -115,29 +203,30 @@
                     </section>
                 </div>
             </div>
-    </aside>
+        </aside>
 
-    <main class="container-fluid row main-row">
-        <header class="main-header container-fluid">
-            <a href="https://scantour.ru/"><img src="./img/logo.png" alt="СканТур" width="189" title="Главная"></a>
-            <div class="geo">
-                <img src="./img/geo.svg" alt="Геолокация" title="Геолокация">
-                <span class="location">
-                    <a href="#">Санкт-Петербург</a>
-                </span>
-            </div>
-            <nav class="navbar" role="navigation">
+        <main class="container-fluid row main-row">
+            <header class="main-header container-fluid">
+                <a href="https://scantour.ru/"><img src="./img/logo.png" alt="СканТур" width="189" title="Главная"></a>
+                <div class="geo">
+                    <img src="./img/geo.svg" alt="Геолокация" title="Геолокация">
+                    <span class="location">
+                        <a href="#">Санкт-Петербург</a>
+                    </span>
+                </div>
+                <nav class="navbar navbar-default"></nav>
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar-menu">
-                            <span class="sr-only">Toggle navigation</span>
+                            data-target="#navbar-main">
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
-                                            </button>
+                        </button>
+                        <a href="#" class="navbar-brand">
+                            <htyl< /a>
                     </div>
-                    <div class="navbar-collapse collapse" id="navbar-menu">
+                    <div class="collapse navbar-collapse " id="navbar-main">
                         <ul class="nav navbar-nav">
                             <li><a class="menu-item" href="#">Главная</a></li>
                             <li><a class="menu-item" href="#">Сервис и оплата</a></li>
@@ -147,164 +236,170 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
-            <div class="phone">
-                <span class="phone-label">Бесплатно по РФ</span>
-                <div class="phone-number">
-                    <span>8(800) 555 64 63</span>
-                    <img src="./img/vector.svg " alt="Позвонить">
+                </nav>
+                <div class="phone">
+                    <span class="phone-label">Бесплатно по РФ</span>
+                    <div class="phone-number">
+                        <span>8(800) 555 64 63</span>
+                        <img src="./img/vector.svg " alt="Позвонить">
+                    </div>
                 </div>
-            </div>
-            <div class="login ">
-                <a href="# ">Вход</a> | <a href="# ">Регистрация</a>
-            </div>
-        </header>
-        <section class="main-content">
-            <h3 class="heading ">
-                Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
-            </h3>
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="main-content__main-image">
-                        <div class="main-slider">
-                            <img src="./img/left-arrow.svg" alt="" class="toggle-slider">
-                            <img src="./img/right-arrow.svg" alt="" class="toggle-slider">
-                            <div class="slider-description">
-                                <span class="main-text">Широкая Масленица в традиционной Заонежской деревне</span><br>
-                                <span class="other-text">Остров Кижи, дер. Мандроги, Витославлицы</span>
-                                <a href="#" class="goto-link"><img src="./img/goto.svg" alt=""></a>
+                <div class="login ">
+                    <a href="# ">Вход</a> | <a href="# ">Регистрация</a>
+                </div>
+            </header>
+            <section class="main-content">
+                <h3 class="heading ">
+                    Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
+                </h3>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="main-content__main-image">
+                            <div class="main-content__main-image__slider">
+                                <div>
+                                <img src="./img/left-arrow.svg" alt="" class="toggle-slider">
+                                <img src="./img/right-arrow.svg" alt="" class="toggle-slider">
+                            </div>
+                                <div class="main-content__main-image__slider__description">
+                                    <div class="main-text">
+                                        <p>Широкая Масленица в традиционной Заонежской
+                                            деревне
+                                        </p>
+                                        <span class="other-text">Остров Кижи, дер. Мандроги, Витославлицы</span>
+                                    </div>
+                                    <a href="#" class="red-button">Перейти</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row main-content__image-row">
-                        <div class="left-image col-md-6">
-                            <span class="main-text">Туры для групп</span>
-                            <button type="button" class="red-button">Заказать</button>
+                        <div class="row main-content__image-row">
+                            <div class="left-image col-md-6">
+                                <span class="main-text">Туры для групп</span>
+                                <a href="#" class="red-button">Перейти</a>
+                            </div>
+                            <div class="right-image col-md-6 "></div>
                         </div>
-                        <div class="right-image col-md-6 "></div>
+                    </div>
+                    <div class="col-md-3 main-content__right-column">
+                        <div class="main-content__right-column__item">
+                            <a href="#">🔥&nbsp;&nbsp;Горящие туры</a>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">❤️&nbsp;День святого Валентина</a>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Карелия на 1 день</a><span class="price"> от 1490&nbsp;₽</span>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Карелия на 3 дня</a><span class="price"> от 4650&nbsp;₽</span>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Карелия на 2-8 дней</a><span class="price">от 4650&nbsp;₽</span>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Ленобласть</a><span class="price">от 1490&nbsp;₽</span>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Новгород</a><span class="price">от 1790&nbsp;₽</span>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Псков</a><span class="price">от 2090&nbsp;₽</span>
+                        </div>
+                        <div class="main-content__right-column__item">
+                            <a href="#">Вологда</a><span class="price">от 17090&nbsp;₽</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 main-content__right-column">
-                    <div class="main-content__right-column__item">
-                        <a href="#">🔥&nbsp;&nbsp;Горящие туры</a>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">❤️&nbsp;День святого Валентина</a>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Карелия на 1 день</a><span class="price"> от 1490&nbsp;₽</span>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Карелия на 3 дня</a><span class="price"> от 4650&nbsp;₽</span>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Карелия на 2-8 дней</a><span class="price">от 4650&nbsp;₽</span>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Ленобласть</a><span class="price">от 1490&nbsp;₽</span>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Новгород</a><span class="price">от 1790&nbsp;₽</span>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Псков</a><span class="price">от 2090&nbsp;₽</span>
-                    </div>
-                    <div class="main-content__right-column__item">
-                        <a href="#">Вологда</a><span class="price">от 17090&nbsp;₽</span>
+                <div class="row">
+                    <div class="main-content__because col-md-12">
+                        <span class="main-content__because__title">Почему нас выбирают</span>
+                        <a class="main-content__because__link" href="#">
+                            <img src="./img/details.svg" alt="Узнать подробнее">
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="main-content__because col-md-12">
-                    <span class="main-content__because__title">Почему нас выбирают</span>
-                    <a class="main-content__because__link" href="#">
-                        <img src="./img/details.svg" alt="Узнать подробнее">
+                <div class="main-content__cards">
+                    <div class="main-content__cards__item">
+                        <span class="main-content__cards__item__title">
+                            70 автобусов премиум класса
+                        </span>
+                        <span class="main-content__cards__item__subtitle">
+                            50-местные автобусы марки Мерседес
+                        </span>
+                    </div>
+                    <div class="main-content__cards__item">
+                        <span class="main-content__cards__item__title">
+                            8 топовых гидов России
+                        </span>
+                        <span class="main-content__cards__item__subtitle">
+                            Лучшие гиды туроператора СканТур
+                        </span>
+                    </div>
+                    <div class="main-content__cards__item">
+                        <span class="main-content__cards__item__title">
+                            Размещение в лучших отелях
+                        </span>
+                        <span class="main-content__cards__item__subtitle">
+                            Высокие рейтинги по мнению экспертов
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <footer class="main-footer row">
+        <aside class="col-md-3 main-footer__left">
+            <ul class="main-footer__left-copyright">
+                <li><a href="" class="main-footer__left-copyright__item">&copy; 2020 ООО "СканТур"</a></li>
+                <li><a href="" class="main-footer__left-copyright__item">Все материалы защищены.</a></li>
+                <li><a href="" class="main-footer__left-copyright__item">Договор оферта</a></li>
+                <li><a href="" class="main-footer__left-copyright__item">Политика персональных данных</a></li>
+            </ul>
+            <span class="main-footer__left__header">Мы принимаем к оплате:</span>
+            <section class="main-footer__left-paymant">
+                <a href="#" class="main-footer__left-paymant__card"><img src="./img/mastercard.svg"
+                        alt="mastercard"></a>
+                <a href="#" class="main-footer__left-paymant__card"><img src="./img/mircard.svg" alt="mircard"></a>
+                <a href="#" class="main-footer__left-paymant__card"><img src="./img/qiwicard.svg" alt="qiwicard"></a>
+                <a href="#" class="main-footer__left-paymant__card"><img src="./img/visa.svg" alt="visa"></a>
+            </section>
+        </aside>
+        <div class="col-md-9">
+            <section class="main-footer-contact row">
+                <div class="main-footer-contact__phone col-md-3">
+                    <span>8(800) 555 64 63</span>
+                    <span>Бесплатно по РФ, с 10:00 - 22:00</span>
+                </div>
+                <div class="main-footer-contact__city col-xl-6 col-md-4">
+                    <span>Санкт-Петербург&nbsp;&nbsp;&nbsp;8(812) 607 64 63</span>
+                    <span>с 10:00 - 19:00</span>
+                </div>
+                <div class="main-footer-contact__social col-xl-3 col-md-5">
+                    <a href="https://www.facebook.com/ScanTour-%D0%A2%D1%83%D1%80%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%BF%D0%BE-%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8-928498107276206/?view_public_for=928498107276206"
+                        class="main-footer-contact__social__link">
+                        <img src="./img/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="https://vk.com/tyri_v_kareliu" class="main-footer-contact__social__link">
+                        <img src="./img/vk.svg" alt="vk">
+                    </a>
+                    <a href="https://www.instagram.com/scantour.ru/" class="main-footer-contact__social__link">
+                        <img src="./img/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC4wYpmnUyBwZpK1RvJkKNkA"
+                        class="main-footer-contact__social__link">
+                        <img src="./img/youtube.svg" alt="youtube">
+                    </a>
+                    <a href="https://ok.ru/group/54207014961352" class="main-footer-contact__social__link">
+                        <img src="./img/ok.svg" alt="ok">
                     </a>
                 </div>
-            </div>
-            <div class="main-content__cards">
-                <div class="main-content__cards__item">
-                    <span class="main-content__cards__item__title">
-                        70 автобусов премиум класса
-                    </span>
-                    <span class="main-content__cards__item__subtitle">
-                        50-местные автобусы марки Мерседес
-                    </span>
-                </div>
-                <div class="main-content__cards__item">
-                    <span class="main-content__cards__item__title">
-                        8 топовых гидов России
-                    </span>
-                    <span class="main-content__cards__item__subtitle">
-                        Лучшие гиды туроператора СканТур
-                    </span>
-                </div>
-                <div class="main-content__cards__item">
-                    <span class="main-content__cards__item__title">
-                        Размещение в лучших отелях
-                    </span>
-                    <span class="main-content__cards__item__subtitle">
-                        Высокие рейтинги по мнению экспертов
-                    </span>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-</div>
-<footer class="main-footer row">
-    <aside class="col-md-3 main-footer__left">
-        <ul class="main-footer__left-copyright">
-            <li><a href="" class="main-footer__left-copyright__item">&copy; 2020 ООО "СканТур"</a></li>
-            <li><a href="" class="main-footer__left-copyright__item">Все материалы защищены.</a></li>
-            <li><a href="" class="main-footer__left-copyright__item">Договор оферта</a></li>
-            <li><a href="" class="main-footer__left-copyright__item">Политика персональных данных</a></li>
-        </ul>
-        <span class="main-footer__left__header">Мы принимаем к оплате:</span>
-        <section class="main-footer__left-paymant">
-            <a href="#" class="main-footer__left-paymant__card"><img src="./img/mastercard.svg"
-                    alt="mastercard"></a>
-            <a href="#" class="main-footer__left-paymant__card"><img src="./img/mircard.svg" alt="mircard"></a>
-            <a href="#" class="main-footer__left-paymant__card"><img src="./img/qiwicard.svg" alt="qiwicard"></a>
-            <a href="#" class="main-footer__left-paymant__card"><img src="./img/visa.svg" alt="visa"></a>
-        </section>
-    </aside>
-    <div class="col-md-9">
-        <section class="main-footer-contact row">
-            <div class="main-footer-contact__phone col-md-3">
-                <span>8(800) 555 64 63</span>
-                <span>Бесплатно по РФ, с 10:00 - 22:00</span>
-            </div>
-            <div class="main-footer-contact__city col-xl-6 col-md-4">
-                <span>Санкт-Петербург&nbsp;&nbsp;&nbsp;8(812) 607 64 63</span>
-                <span>с 10:00 - 19:00</span>
-            </div>
-            <div class="main-footer-contact__social col-xl-3 col-md-5">
-                <a href="https://www.facebook.com/ScanTour-%D0%A2%D1%83%D1%80%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%BF%D0%BE-%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8-928498107276206/?view_public_for=928498107276206"
-                    class="main-footer-contact__social__link">
-                    <img src="./img/facebook.svg" alt="facebook">
-                </a>
-                <a href="https://vk.com/tyri_v_kareliu" class="main-footer-contact__social__link">
-                    <img src="./img/vk.svg" alt="vk">
-                </a>
-                <a href="https://www.instagram.com/scantour.ru/" class="main-footer-contact__social__link">
-                    <img src="./img/instagram.svg" alt="instagram">
-                </a>
-                <a href="https://www.youtube.com/channel/UC4wYpmnUyBwZpK1RvJkKNkA"
-                    class="main-footer-contact__social__link">
-                    <img src="./img/youtube.svg" alt="youtube">
-                </a>
-                <a href="https://ok.ru/group/54207014961352" class="main-footer-contact__social__link">
-                    <img src="./img/ok.svg" alt="ok">
-                </a>
-            </div>
-        </section>
-        <section class="main-footer-setificate">
-            <img src="./img/ssl.svg" alt="ssl">
-            Ваши данные в безопасности. Технологии шифрования COMODO SSL Certificate
-        </section>
-    </div>
-</footer>
+            </section>
+            <section class="main-footer-setificate">
+                <img src="./img/ssl.svg" alt="ssl">
+                Ваши данные в безопасности. Технологии шифрования COMODO SSL Certificate
+            </section>
+        </div>
+    </footer>
 
 </body>
 <script type="text/javascript" async src="./js/menu.js"></script>

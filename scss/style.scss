@@ -34,7 +34,10 @@ body {
   line-height: 20px;
   letter-spacing: 0.01em;
   .red-button {
-    cursor: pointer;
+    width: 145px;
+    height: 50px;
+    letter-spacing: .09em;
+    box-shadow: 0px 5px 9px rgba(255, 83, 83, 0.35);
     background: #df391c;
     border-radius: 5px;
     font-weight: 600;
@@ -44,19 +47,16 @@ body {
     color: #ffffff;
     display: inline-flex;
     justify-content: center;
-    width: 145px;
-    height: 50px;
+    
     border-color: #df391c;
     &:hover {
       opacity: 0.7;
     }
   }
-  .container-fluid {
-    padding: 0;
-  }
-  .page{
-      display: flex;
-      height: 100%;
+
+  .page {
+    display: flex;
+    height: 100%;
   }
 }
 
@@ -67,24 +67,61 @@ body {
 .left-menu {
   background-color: #00394b;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: left;
   height: 100%;
   position: relative;
   width: $menu-width;
+  &__calendar {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .nav-tabs {
+    border-bottom: none;
+    height: 80px;
+    display: flex;
+    .nav-item {
+      width: 135px;
+      max-width: 50%;
+      li {
+        margin-bottom: 0;
+      }
+      a {
+        svg {
+          fill: #60bdca;
+        }
+        width: 100%;
+        cursor: pointer;
+        border: none;
+        height: 100%;
+        padding: 27px 0;
+        background-color: #00475d;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+      }
+      a:hover,
+      a:focus,
+      .active a {
+        background-color: #00394b;
+        border: none;
+        svg {
+          fill: #f0f4fa;
+        }
+      }
+    }
+  }
 
   &__header {
-    padding: 0;
-    .heading {
-      padding-left: 6px;
-      font-family: sourcesanspro-bold, Arial, sans-serif;
-      font-size: 16px;
-      line-height: inherit;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #fff;
-    }
+    font-family: inherit;
+    padding: 51px 0 40px 6px;
+    font-size: 19px;
+    line-height: 30px;
+    color: #fff;
   }
   &__nav {
     ul {
@@ -128,8 +165,8 @@ body {
 .main-header {
   background-color: white;
   height: $height-header;
-  position: fixed;
-  z-index: 190;
+  //position: fixed;
+  z-index: 90;
   top: 0;
   right: 0;
   width: calc(100% - 270px);
@@ -158,8 +195,8 @@ body {
     }
   }
   .geo {
-      padding-left: 15px;
-      width: 153px;
+    padding-left: 15px;
+    width: 153px;
     .location {
       padding-left: 3px;
       font-family: ubuntu;
@@ -249,8 +286,8 @@ body {
   position: relative;
   margin: 0;
   z-index: 0;
-padding-left: 23px;
-padding-right: 25px;
+  padding-left: 23px;
+  padding-right: 25px;
   .main-content {
     position: relative;
     display: flex;
@@ -276,42 +313,50 @@ padding-right: 25px;
       padding-bottom: 22px;
       padding-right: 22px;
       padding-left: 40px;
-      .main-slider {
+      &__slider {
         display: flex;
+        flex-direction: column;
         width: 100%;
+        align-items: flex-end;
         justify-content: space-between;
         .toggle-slider {
           cursor: pointer;
+          &:first-child{
+            margin-right: 29px;
+          }
         }
         .toggle-slider:hover {
           opacity: 0.5;
         }
-        .slider-description {
-          width: 601px;
+        &__description {
+          width: 693px;
+          max-width: 100%;
+          margin-top: 22px;
           height: 103px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           background-color: white;
           border-radius: 3px;
-          padding: 13px 23px 20px;
+          padding: 19px 32px 18px 23px;
           position: relative;
           .main-text {
+            max-width: 417px;
             font-family: ssp-bold;
             font-size: 17px;
             line-height: inherit;
             color: #333333;
           }
           .other-text {
+            font-family: ssp-normal;
             font-size: 16px;
             line-height: 23px;
-            color: #4f4f4f;
+            letter-spacing: 0.01em;
+            color: #4F4F4F;
           }
-          .goto-link {
-            position: absolute;
-            top: 30px;
-            right: 23px;
-          }
-          .goto-link:hover {
-            opacity: 0.5;
-          }
+          a {
+            width: 145px;
+          }          
         }
       }
     }
