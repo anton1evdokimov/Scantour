@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
     <!-- Подключаем Bootstrap JS -->
     <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
@@ -214,7 +212,30 @@
                         <a href="#">Санкт-Петербург</a>
                     </span>
                 </div>
-                <nav class="navbar navbar-default"></nav>
+               <nav class="navbar navbar-expand-lg">
+                   <a href="" class="navbar-brand">Brand</a>
+                   <button class="navbar-toggle" type="button" data-toggle="collapse" 
+                   data-target="#navbarScanTourContent" aria-controls="navbarScanTourContent" aria-expanded="false"
+                   aria-label="Toggle navigation" 
+                   >
+                       <span class="navbar-toggler-icon">
+
+                       </span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarScanTourContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link"></a>
+                            </li>
+                            <li><a class="nav-link" href="#">Главная</a></li>
+                            <li><a class="nav-link" href="#">Сервис и оплата</a></li>
+                            <li><a class="nav-link" href="#">Компания</a></li>
+                            <li><a class="nav-link" href="#">Агентствам</a></li>
+                            <li><a class="nav-link" href="#">Контакты</a></li>
+                        </ul>
+                   </div>
+               </nav>
+              <!--  <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -236,7 +257,7 @@
                         </ul>
                     </div>
                 </div>
-                </nav>
+                </nav>-->
                 <div class="phone">
                     <span class="phone-label">Бесплатно по РФ</span>
                     <div class="phone-number">
@@ -252,15 +273,15 @@
                 <h3 class="heading ">
                     Туры по Карелии, Северо-Западу России из Санкт-Петербурга и Петрозаводска
                 </h3>
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="main-content__main-image">
-                            <div class="main-content__main-image__slider">
+                <div class="row main-content__first-row">
+                    <div class="col-xl-7 col-md-12 first-image">
+                        <div class="main-content__first-row__main-image">
+                            <div class="main-content__first-row__main-image__slider">
                                 <div>
-                                <img src="./img/left-arrow.svg" alt="" class="toggle-slider">
-                                <img src="./img/right-arrow.svg" alt="" class="toggle-slider">
-                            </div>
-                                <div class="main-content__main-image__slider__description">
+                                    <img src="./img/left-arrow.svg" alt="" class="toggle-slider">
+                                    <img src="./img/right-arrow.svg" alt="" class="toggle-slider">
+                                </div>
+                                <div class="main-content__first-row__main-image__slider__description">
                                     <div class="main-text">
                                         <p>Широкая Масленица в традиционной Заонежской
                                             деревне
@@ -271,15 +292,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row main-content__image-row">
-                            <div class="left-image col-md-6">
-                                <span class="main-text">Туры для групп</span>
+                    </div>
+                    <div class="col-xl-5 col-md-12">
+                        <div class="main-content__first-row__second-image">
+                            <div class="main-content__first-row__second-image__content">
+                                <span>
+                                    Раннее бронирование со скидкой 20%
+                                </span>
                                 <a href="#" class="red-button">Перейти</a>
                             </div>
-                            <div class="right-image col-md-6 "></div>
+                            
                         </div>
                     </div>
-                    <div class="col-md-3 main-content__right-column">
+                </div>
+
+                <div class="row main-content__image-row">
+                    <div class="left-image col-md-3">
+                        <span class="main-text">Туры для групп</span>
+                        <a href="#" class="red-button">Перейти</a>
+                    </div>
+                    <div class="right-image col-md-3 "></div>
+                </div>
+                <!--<div class="col-md-3 main-content__right-column">
                         <div class="main-content__right-column__item">
                             <a href="#">🔥&nbsp;&nbsp;Горящие туры</a>
                         </div>
@@ -309,6 +343,7 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <div class="row">
                     <div class="main-content__because col-md-12">
                         <span class="main-content__because__title">Почему нас выбирают</span>
