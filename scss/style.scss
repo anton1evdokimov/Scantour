@@ -50,7 +50,9 @@ body {
 
     border-color: #df391c;
     &:hover {
-      opacity: 0.7;
+      opacity: 0.89;
+      text-decoration: none;
+      color: black;
     }
   }
 
@@ -72,7 +74,7 @@ body {
   align-items: left;
   height: 100%;
   position: relative;
-  max-width: $menu-width;
+  width: $menu-width;
   &__calendar {
     font-weight: 600;
     font-size: 16px;
@@ -169,14 +171,83 @@ body {
 .main-header {
   background-color: white;
   height: $height-header;
-  //position: fixed;
+  position: fixed;
+  margin: 0;
+  padding: 0;
   z-index: 90;
   top: 0;
   right: 0;
-  width: calc(100% - 270px);
+  width: calc(100% - 299px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .menu-label {
+    border: 1px solid black;
+    display: none;
+    background-size: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    min-width: 500px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    li {
+      height: 100%;
+    }
+  }
+  .menu-txt:hover {
+    color: #045857;
+    background: #f0f4fa;
+  }
+  a.menu-txt {
+    min-width: 40px;
+    margin: 0 4.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #4f4f4f;
+    text-decoration: none;
+    font-family: montserrat-light, Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  .search {
+    margin-left: 33px;
+    width: 30px;
+    height: 30px;
+  }
+
+  input[type="search"] {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    background-color: transparent;
+    background-image: url("../img/search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  input[type="search"]:focus {
+    width: 300px;
+    background-color: white;
+    transition: width 1s ease-out;
+    background-position: right;
+  }
+
+  #menu1 {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block !important;
+  }
   .navbar {
     margin: 0;
     border: none;
@@ -213,6 +284,7 @@ body {
       }
     }
   }
+
   .phone {
     width: 130px;
     display: flex;
@@ -232,6 +304,11 @@ body {
       font-size: 16px;
       line-height: inherit;
       color: #333333;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    .phone {
+      display: none;
     }
   }
   .login {
@@ -288,11 +365,18 @@ body {
 
 .main-row {
   position: relative;
+  top: $height-header;
   margin: 0;
   z-index: 0;
-  padding-left: 23px;
-  padding-right: 25px;
+  padding-left: 29px;
+  max-width: 1544px;
+  width: 100%;
   .main-content {
+    .row {
+      width: 120%;
+    }
+    overflow-x: hidden;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -305,16 +389,14 @@ body {
       font-size: 33px;
       line-height: 40px;
       color: #373737;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
+      width: 972px;
     }
     &__first-row {
-      .first-image {
-        padding-right: 0;
-      }
       &__main-image {
         max-width: 870px;
         width: 100%;
-        margin: 0 15px 20px 0;
+        margin: 0 0 30px 0;
         min-width: 559px;
         height: 410px;
         background-position: center;
@@ -323,9 +405,8 @@ body {
         background-size: cover;
         display: flex;
         align-items: flex-end;
-        padding-bottom: 22px;
-        padding-right: 22px;
-        padding-left: 40px;
+        padding-bottom: 29px;
+        padding-right: 27px;
         &__slider {
           display: flex;
           flex-direction: column;
@@ -343,7 +424,7 @@ body {
           }
           &__description {
             width: 693px;
-            max-width: 100%;
+            max-width: calc(100% - 50px);
             margin-top: 22px;
             height: 103px;
             display: flex;
@@ -353,6 +434,7 @@ body {
             border-radius: 3px;
             padding: 19px 32px 18px 23px;
             position: relative;
+
             .main-text {
               max-width: 417px;
               font-family: ssp-bold;
@@ -403,65 +485,106 @@ body {
       }
     }
     &__image-row {
-      margin: 0;
+      @media screen and (max-width: 1200px) {
+        .col-xl-4,
+        .col-xl-3 {
+          height: 100%;
+          margin-top: 30px;
+        }
+      }
+      margin-bottom: 30px;
       height: 190px;
-      .right-image,
-      .left-image {
-        width: calc(50% - 10px);
-
-        margin-left: 10px;
-        background: linear-gradient(
-            21.55deg,
-            rgba(0, 0, 0, 0.52) 25.36%,
-            rgba(0, 0, 0, 0) 60.01%
-          ),
-          url("../img/right-image.png");
-        background-blend-mode: darken, normal;
-        background-size: cover;
-        background-position: bottom;
-        padding: 25px 22px;
+      .child-image,
+      .weekend-image,
+      .board-image {
+        padding: 0 30px 33px;
+        height: 100%;
+        background-image: url("../img/childs.png");
+        background-size: 115%;
+        background-position: 30% 70%;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
+        align-items: flex-end;
         .main-text {
           font-family: ssp-bold;
           font-size: 20px;
           line-height: inherit;
           text-transform: uppercase;
           color: #ffffff;
-          margin-bottom: 25px;
         }
       }
-      .left-image {
-        margin-right: 10px;
+      .board-image {
         margin-left: 0;
         background: linear-gradient(
             21.55deg,
             rgba(0, 0, 0, 0.52) 25.36%,
             rgba(0, 0, 0, 0) 60.01%
           ),
-          url("../img/left-image.png");
+          url("../img/board-image.png");
         background-blend-mode: darken, normal;
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
       }
-    }
-    &__because {
-      margin: 55px 0 43px;
-      display: flex;
-      align-items: center;
-      &__title {
-        font-family: ssp-bold, Arial, sans-serif;
-        font-size: 28px;
-        line-height: 36px;
-        color: #373737;
-      }
-      &__link {
-        &:hover {
-          opacity: 0.5;
+      .weekend-image {
+        background-size: cover;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        background-image: url("../img/weekend-image.png");
+        .main-text {
+          margin-bottom: 18px;
         }
       }
+      &__because {
+        height: 100%;
+        background: #f0f4fa;
+        padding: 20px 50px 32px 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        font-size: 18px;
+        color: #05050a;
+        & > div {
+          min-width: 220px;
+          text-align: left;
+        }
+        &__count {
+          font-size: 30px;
+        }
+        &__link {
+          font-size: 16px;
+          line-height: 126.39%;
+          text-align: right;
+          color: #5488c7;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      .hotel-image,
+      .autobus-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px 50px 32px 28px;
+        height: 100%;
+        background-size: 110%;
+        background-position: bottom;
+        background-image: url("../img/hotel.png");
+      }
+      .autobus-image {
+        &__title {
+          font-weight: 600;
+          font-size: 18px;
+          color: #05050a;
+          width: 153px;
+        }
+
+        background-image: url("../img/autobus.png");
+      }
     }
+
     &__cards {
       display: flex;
       flex-wrap: wrap;
@@ -538,6 +661,71 @@ body {
         color: #828282;
       }
     }
+    &__tours {
+      .nav-tabs {
+        margin: 19px 0 57px;
+        border: none;
+      }
+      .nav-item a {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        color: #828282;
+        margin: 0 5.9vw 0 15px;
+        &:hover,
+        &.active {
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 36px;
+          color: #373737;
+          text-decoration: none;
+        }
+      }
+      .tours-tab {
+        height: 300px;
+        .row{
+          height: 100%;
+        }
+        .tab-pane {
+          height: 100%;
+          width: 100%;
+          [class^="col-xl-"] {
+            height: 100%;
+          }
+        }
+        #popularDiscountedTours {
+          .item {
+            height: 100%;
+            position: relative;
+            .top-image{
+              height: 156px;
+              background-image: url("../img/weekend-image.png");
+              background-position: center;
+            }   
+            .text-content{
+              position: absolute;
+              min-height: 130px;
+              border-radius: 5px;
+              top: 110px;
+              left: calc(7% + 28px);
+              right: 7%;
+              margin: auto;
+              background-color: #fff;
+            }         
+            border: 1px solid #F0F4FA;
+          }
+          a {
+            background-color: #f0f4fa;
+          }
+        }
+        #hotTours {
+          background-color: greenyellow;
+        }
+        #eventTours {
+          background-color: green;
+        }
+      }
+    }
   }
 }
 
@@ -553,6 +741,7 @@ body {
     height: 100%;
   }
   &__left {
+    width: $menu-width;
     padding-left: $padding-left;
     background-color: #00394b;
     &-copyright {
