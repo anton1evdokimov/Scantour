@@ -683,7 +683,7 @@ body {
       }
       .tours-tab {
         height: 300px;
-        .row{
+        .row {
           height: 100%;
         }
         .tab-pane {
@@ -697,12 +697,13 @@ body {
           .item {
             height: 100%;
             position: relative;
-            .top-image{
+            .top-image {
               height: 156px;
               background-image: url("../img/weekend-image.png");
               background-position: center;
-            }   
-            .text-content{
+            }
+            .text-content {
+              padding: 21px 21px 0 22px;
               position: absolute;
               min-height: 130px;
               border-radius: 5px;
@@ -711,8 +712,29 @@ body {
               right: 7%;
               margin: auto;
               background-color: #fff;
-            }         
-            border: 1px solid #F0F4FA;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              .first {
+                display: flex;
+                flex-direction: column;
+                .discount {
+                  font-weight: 600;
+                  font-size: 15px;
+                  line-height: 10px;
+                  text-align: center;
+                  color: #fff;
+                  background: #4DAE38;
+                  border-radius: 4px;
+                }
+              }
+              .main-title {
+                font-weight: 600;
+                font-size: 17px;
+                color: #4f4f4f;
+              }
+            }
+            border: 1px solid #f0f4fa;
           }
           a {
             background-color: #f0f4fa;
