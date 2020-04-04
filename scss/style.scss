@@ -383,7 +383,7 @@ body {
       align-items: center;
     }
     .goto-link:hover {
-      background-color: rgb(178, 190, 209);
+      background-color: rgb(220, 232, 250);
     }
     .goto-from-ul {
       font-size: 18px;
@@ -680,7 +680,8 @@ body {
       }
     }
     &__tours,
-    &__our-faces {
+    &__our-faces,
+    &__events {
       .nav-tabs {
         margin: 19px 0 57px;
         border: none;
@@ -717,7 +718,7 @@ body {
             height: 100%;
           }
         }
-        .tab-pane[id] {
+        .tab-pane {
           .item {
             height: 100%;
             position: relative;
@@ -830,7 +831,7 @@ body {
       }
     }
     &__our-faces {
-      margin-top: 18px;
+      margin: 18px 0 100px;
       .our-pride-in-faces {
         font-weight: bold;
         font-size: 28px;
@@ -838,7 +839,13 @@ body {
         color: #373737;
         padding-left: 0;
       }
-      .nav-item{
+      .see-all {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+      }
+      .nav-item {
         text-transform: uppercase;
       }
       .list-cards {
@@ -849,6 +856,22 @@ body {
           flex-direction: column;
           align-items: center;
           justify-content: space-between;
+          .star {
+            img {
+              position: relative;
+              bottom: 2px;
+            }
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: #828282;
+            margin-right: 9px;
+          }
+          .heart {
+            position: absolute;
+            top: 20px;
+            right: 8%;
+          }
           .name {
             font-weight: 600;
             font-size: 17px;
@@ -865,17 +888,6 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .star {
-              img{
-                position: relative;
-                bottom: 2px;
-              }
-              font-size: 14px;
-              line-height: 18px;
-              text-align: center;
-              color: #828282;
-              margin-right: 9px;
-            }
             .comments-count {
               font-size: 14px;
               line-height: 18px;
@@ -884,7 +896,111 @@ body {
             }
           }
         }
+        .best-employee {
+          background-image: url("../img/employee-of-the-month.png");
+          background-size: 115%;
+          background-position: center 20%;
+          flex-direction: row;
+          padding: 55px 35px;
+          &__text {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .title {
+              font-weight: bold;
+              font-size: 20px;
+              line-height: 24px;
+              text-align: center;
+              text-transform: uppercase;
+              color: #373737;
+              margin-bottom: 30px;
+            }
+            .employee-name {
+              font-weight: 600;
+              font-size: 17px;
+              line-height: 22px;
+              text-align: center;
+              color: #333333;
+              margin-bottom: 5px;
+            }
+            .profession {
+              font-size: 14px;
+              line-height: 18px;
+              text-align: center;
+              color: #828282;
+              margin-bottom: 17px;
+            }
+          }
+        }
       }
+    }
+    &__events {
+      ul {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 40px;
+        .scantour-events-title {
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 36px;
+          color: #373737;
+        }
+        .digest {
+          font-size: 16px;
+          line-height: 23px;
+          color: #4f4f4f;
+        }
+      }
+        .item {
+          .top-image {
+            background-image: url("../img/taxi.png");
+            height: 190px;
+          }
+
+          .events-text-content {
+            max-width: 250px;
+            position: relative;
+            padding-left: 8%;
+            padding-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            .heart {
+              position: absolute;
+            }
+            .news {
+              font-family: ubuntu;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 24px;
+              color: #ffffff;
+              position: absolute;
+              top: -50px;
+              left: 35px;
+              padding: 1px 5px 3px;
+              background-color: #004198;
+              border-radius: 7px;
+              -webkit-border-radius: 7px;
+              -moz-border-radius: 7px;
+              -ms-border-radius: 7px;
+              -o-border-radius: 7px;
+            }
+            .event-date {
+              font-size: 14px;
+              line-height: 18px;
+              color: #828282;
+            }
+            .event-title {
+              font-weight: 600;
+              font-size: 17px;
+              line-height: 22px;
+              color: #333;
+            }
+          }
+        }
     }
   }
 }
