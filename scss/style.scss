@@ -375,6 +375,25 @@ body {
     .row {
       width: 120%;
     }
+    .goto-link {
+      background-color: #f0f4fa;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .goto-link:hover {
+      background-color: rgb(178, 190, 209);
+    }
+    .goto-from-ul {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      color: #5488c7;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
     overflow-x: hidden;
     width: 100%;
     position: relative;
@@ -389,10 +408,10 @@ body {
       font-size: 33px;
       line-height: 40px;
       color: #373737;
-      margin-bottom: 30px;
       width: 972px;
     }
     &__first-row {
+      margin-top: 30px;
       &__main-image {
         max-width: 870px;
         width: 100%;
@@ -493,7 +512,7 @@ body {
         }
       }
       margin-bottom: 30px;
-      height: 190px;
+      min-height: 190px;
       .child-image,
       .weekend-image,
       .board-image {
@@ -584,7 +603,6 @@ body {
         background-image: url("../img/autobus.png");
       }
     }
-
     &__cards {
       display: flex;
       flex-wrap: wrap;
@@ -661,17 +679,22 @@ body {
         color: #828282;
       }
     }
-    &__tours {
+    &__tours,
+    &__our-faces {
       .nav-tabs {
         margin: 19px 0 57px;
         border: none;
+      }
+      .nav-item:first-child {
+        margin-left: -15px;
+        padding-left: 0;
       }
       .nav-item a {
         font-weight: 500;
         font-size: 28px;
         line-height: 36px;
         color: #828282;
-        margin: 0 5.9vw 0 15px;
+        margin: 0 0 0 15px;
         &:hover,
         &.active {
           font-weight: bold;
@@ -681,7 +704,8 @@ body {
           text-decoration: none;
         }
       }
-      .tours-tab {
+
+      .list-cards {
         height: 300px;
         .row {
           height: 100%;
@@ -693,7 +717,7 @@ body {
             height: 100%;
           }
         }
-        #popularDiscountedTours {
+        .tab-pane[id] {
           .item {
             height: 100%;
             position: relative;
@@ -717,15 +741,75 @@ body {
               justify-content: space-between;
               .first {
                 display: flex;
-                flex-direction: column;
-                .discount {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                height: 55px;
+                margin-bottom: 12px;
+                .market {
+                  min-width: 190px;
+                  .discount,
+                  .additional-discount,
+                  .hit {
+                    //display: inline-block;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 10px;
+                    text-align: center;
+                    color: #fff;
+                    padding: 0 3px 0 5.9px;
+                    background: #4dae38;
+                    border-radius: 4px;
+                    margin-right: 3%;
+                    margin-bottom: 17px;
+                  }
+                  .hit {
+                    background-color: #f2994a;
+                  }
+                  .additional-discount {
+                    background-color: #60bdca;
+                    .destination {
+                      font-size: 10px;
+                      position: relative;
+                      bottom: 1px;
+                    }
+                  }
+                }
+                .duration {
+                  background-color: #f0f4fa;
+                  border-radius: 5px;
                   font-weight: 600;
-                  font-size: 15px;
-                  line-height: 10px;
+                  font-size: 12px;
+                  line-height: 18px;
                   text-align: center;
-                  color: #fff;
-                  background: #4DAE38;
-                  border-radius: 4px;
+                  color: #5488c7;
+                  padding: 2px 5px;
+                }
+                .heart {
+                  text-align: right;
+                  background-color: transparent;
+                  min-width: calc(100% - 190px);
+                }
+                .date-of-departure {
+                  font-size: 14px;
+                  line-height: 18px;
+                  text-align: right;
+                  color: #828282;
+                }
+              }
+              .price {
+                .discount-price {
+                  font-weight: bold;
+                  font-size: 18px;
+                  line-height: 22px;
+                  color: #4dae38;
+                  margin-right: 7px;
+                }
+                .per-person {
+                  font-weight: normal;
+                  font-size: 15px;
+                  line-height: 22px;
+                  color: #4f4f4f;
+                  margin-right: 12px;
                 }
               }
               .main-title {
@@ -733,18 +817,72 @@ body {
                 font-size: 17px;
                 color: #4f4f4f;
               }
+              .old-price {
+                font-size: 14px;
+                line-height: 36px;
+                color: #828282;
+                text-decoration: line-through;
+              }
             }
             border: 1px solid #f0f4fa;
           }
-          a {
-            background-color: #f0f4fa;
+        }
+      }
+    }
+    &__our-faces {
+      margin-top: 18px;
+      .our-pride-in-faces {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 36px;
+        color: #373737;
+        padding-left: 0;
+      }
+      .nav-item{
+        text-transform: uppercase;
+      }
+      .list-cards {
+        height: 249px;
+        .item {
+          padding: 20px 0 26px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          .name {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 22px;
+            text-align: center;
+            color: #333333;
           }
-        }
-        #hotTours {
-          background-color: greenyellow;
-        }
-        #eventTours {
-          background-color: green;
+          .experience {
+            font-size: 14px;
+            line-height: 18px;
+            color: #828282;
+          }
+          .comment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .star {
+              img{
+                position: relative;
+                bottom: 2px;
+              }
+              font-size: 14px;
+              line-height: 18px;
+              text-align: center;
+              color: #828282;
+              margin-right: 9px;
+            }
+            .comments-count {
+              font-size: 14px;
+              line-height: 18px;
+              text-align: center;
+              color: #045857;
+            }
+          }
         }
       }
     }
@@ -753,7 +891,7 @@ body {
 
 .main-footer {
   margin: 0;
-  display: flex;
+  display: none;
   align-items: flex-end;
   .col-md-9 {
     padding: 0;

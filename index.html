@@ -362,56 +362,27 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="col-md-3 main-content__right-column">
-                        <div class="main-content__right-column__item">
-                            <a href="#">🔥&nbsp;&nbsp;Горящие туры</a>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">❤️&nbsp;День святого Валентина</a>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Карелия на 1 день</a><span class="price"> от 1490&nbsp;₽</span>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Карелия на 3 дня</a><span class="price"> от 4650&nbsp;₽</span>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Карелия на 2-8 дней</a><span class="price">от 4650&nbsp;₽</span>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Ленобласть</a><span class="price">от 1490&nbsp;₽</span>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Новгород</a><span class="price">от 1790&nbsp;₽</span>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Псков</a><span class="price">от 2090&nbsp;₽</span>
-                        </div>
-                        <div class="main-content__right-column__item">
-                            <a href="#">Вологда</a><span class="price">от 17090&nbsp;₽</span>
-                        </div>
-                    </div>
-                </div>
-                -->
-                <div class="row main-content__tours">
-                    <ul class="nav nav-tabs" id="tours-tab">
-                        <li class="nav-item">
+
+                <div class="main-content__tours">
+                    <ul class="nav nav-tabs row" id="tours-tab">
+                        <li class="nav-item col-xl-3">
                             <a data-toggle="tab" href="#popularDiscountedTours" class="active">
                                 Популярные туры со скидкой
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item col-xl-2">
                             <a data-toggle="tab" href="#hotTours">
                                 🔥 Горящие туры
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item col-xl-3">
                             <a data-toggle="tab" href="#eventTours">
                                 Событийные туры
                             </a>
                         </li>
+                        <a class="col-xl-2 goto-from-ul" href="#popularDiscountedTours">Перейти в каталог туров</a>
                     </ul>
-                    <div class="tab-content tours-tab row">
+                    <div class="tab-content list-cards">
                         <div class="tab-pane active" id="popularDiscountedTours">
                             <div class="row">
                                 <div class="col-xl-3 col-md-5">
@@ -419,74 +390,597 @@
                                         <div class="top-image"></div>
                                         <div class="text-content">
                                             <div class="first">
-                                                <div>
-                                                <span class="discount">
-                                                    -20%
-                                                </span>
-                                                <span class="hit">
-                                                    HIT
-                                                </span>
-                                                <span class="additional-discount">
-                                                    -5% <span class="destination">агенствам</span>
-                                                </span>
-                                                <a class="like" href="#">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M16.7879 3.71352C16.3764 3.30188 15.8879 2.97534 15.3503 2.75256C14.8126 2.52977 14.2363 2.4151 13.6543 2.4151C13.0723 2.4151 12.496 2.52977 11.9583 2.75256C11.4206 2.97534 10.9321 3.30188 10.5207 3.71352L9.66678 4.5674L8.81289 3.71352C7.9818 2.88243 6.85461 2.41553 5.67928 2.41553C4.50394 2.41553 3.37675 2.88243 2.54566 3.71352C1.71458 4.5446 1.24768 5.67179 1.24768 6.84713C1.24768 8.02246 1.71458 9.14965 2.54566 9.98074L3.39955 10.8346L9.66678 17.1018L15.934 10.8346L16.7879 9.98074C17.1995 9.5693 17.5261 9.08078 17.7488 8.54311C17.9716 8.00543 18.0863 7.42913 18.0863 6.84713C18.0863 6.26512 17.9716 5.68882 17.7488 5.15115C17.5261 4.61347 17.1995 4.12496 16.7879 3.71352V3.71352Z"
-                                                            stroke="#8DA5A8" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
+
+                                                </div>
+                                                <a class="heart" href="#">
+                                                   <img src="./img/heart.svg" alt="heart" width="20">
                                                 </a>
-                                            </div>
-                                            <div>
                                                 <span class="duration">
-                                                    1 день
+                                                    1&nbsp;день
                                                 </span>
                                                 <span class="date-of-departure">
                                                     Выезд: с 15.02.2020
                                                 </span>
-                                            </div>     
-                                        </div>                                      
-                                            <span class="main-title">
+                                            </div>
+                                            <a class="main-title" href="#">
                                                 Рускеала и Подземный космос. <br> Ранний выезд
-                                            </span>
+                                            </a>
                                             <div class="price">
                                                 <span class="discount-price">
-                                                    2200
+                                                    2200&nbsp;₽
                                                 </span>
                                                 <span class="per-person">
-                                                    | 1 чел
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
                                                 </span>
                                                 <span class="old-price">
-                                                    2800 ₽
+                                                    2800&nbsp;₽
                                                 </span>
-                                            </div>                                           
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
 
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-xl-3 col-md-5 item">
-                                    <div class="top-image"></div>
-                                </div>
-                                <div class="col-xl-3 col-md-5 item">
-                                    <div class="top-image"></div>
-                                </div>
-                                <a class="col-xl-1 col-md-5">
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
 
-                                </a>
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1 col-md-5">
+                                    <a class=" goto-link" href="#">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
+                                                stroke="#F0F4FA" />
+                                            <path
+                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                                fill="#5488C7" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="tab-pane " id="hotTours">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
 
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
+
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
+
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1 col-md-5">
+                                    <a class=" goto-link" href="#">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
+                                                stroke="#F0F4FA" />
+                                            <path
+                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                                fill="#5488C7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane " id="eventTours">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
 
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
+
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
+
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1 col-md-5">
+                                    <a class=" goto-link" href="#">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
+                                                stroke="#F0F4FA" />
+                                            <path
+                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                                fill="#5488C7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row face">
+                <div class="main-content__our-faces">
+                    <ul class="nav nav-tabs row" id="tours-tab">
+                        <li class="col-xl-3 our-pride-in-faces">Наша гордость в лицах</li>
+                        <li class="nav-item col-xl-1">
+                            <a data-toggle="tab" href="#guids" class="active">
+                                гиды
+                            </a>
+                        </li>
+                        <li class="nav-item col-xl-2">
+                            <a data-toggle="tab" href="#managers">
+                                менеджеры
+                            </a>
+                        </li>
+                        <li class="nav-item col-xl-2">
+                            <a data-toggle="tab" href="#quality-department">
+                                отдел качества
+                            </a>
+                        </li>
+                        <li class="col-xl-2">
+                            <a class="goto-from-ul see-all" href="#">Смотреть всех</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content list-cards">
+                        <div class="tab-pane active" id="guids">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                           <div class="star">
+                                               <img src="./img/star.svg" alt="star">
+                                               <span>4,7</span>
+                                           </div>
+                                           <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
 
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-5">
+                                    <div class="item">
+                                        <div class="top-image"></div>
+                                        <div class="text-content">
+                                            <div class="first">
+                                                <div class="market">
+                                                    <span class="discount">
+                                                        -20%
+                                                    </span>
+                                                    <span class="hit">
+                                                        HIT
+                                                    </span>
+                                                    <span class="additional-discount">
+                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
+                                                    </span>
+
+                                                </div>
+                                                <a class="heart" href="#">
+                                                    <img src="./img/heart.svg" alt="heart" width="20">
+                                                 </a>
+                                                <span class="duration">
+                                                    1&nbsp;день
+                                                </span>
+                                                <span class="date-of-departure">
+                                                    Выезд: с 15.02.2020
+                                                </span>
+                                            </div>
+                                            <a class="main-title" href="#">
+                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                            </a>
+                                            <div class="price">
+                                                <span class="discount-price">
+                                                    2200&nbsp;₽
+                                                </span>
+                                                <span class="per-person">
+                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
+                                                </span>
+                                                <span class="old-price">
+                                                    2800&nbsp;₽
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1 col-md-5">
+                                    <a class=" goto-link" href="#">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
+                                                stroke="#F0F4FA" />
+                                            <path
+                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                                fill="#5488C7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane " id="managers">
+
+                        </div>
+                        <div class="tab-pane " id="quality-department">
+
+                        </div>
+                    </div>
                 </div>
 
             </section>
