@@ -18,8 +18,8 @@
     <div class="page">
         <aside class="left-menu">
             <ul class="nav nav-tabs" id="left-menu">
-                <li class="nav-item active">
-                    <a data-toggle="tab" href="#menu">
+                <li class="nav-item">
+                    <a data-toggle="tab" href="#menu" class="active">
                         <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M0 0.5C0 0.223858 0.223858 0 0.5 0H26.0655C26.3417 0 26.5655 0.223858 26.5655 0.5C26.5655 0.776142 26.3417 1 26.0655 1H0.5C0.223858 1 0 0.776142 0 0.5ZM0 8.96783C0 8.69169 0.223858 8.46783 0.5 8.46783H26.0655C26.3417 8.46783 26.5655 8.69169 26.5655 8.96783C26.5655 9.24398 26.3417 9.46783 26.0655 9.46783H0.5C0.223858 9.46783 0 9.24398 0 8.96783ZM0.5 16.936C0.223858 16.936 0 17.1599 0 17.436C0 17.7122 0.223858 17.936 0.5 17.936H26.0655C26.3417 17.936 26.5655 17.7122 26.5655 17.436C26.5655 17.1599 26.3417 16.936 26.0655 16.936H0.5Z" />
@@ -36,170 +36,278 @@
                 </li>
             </ul>
             <div class="tab-content left-menu">
-                <div class="tab-pane active" id="calendar">
-                    <div class="left-menu__calendar">Ближайшие рейсы (12.05)</div>
-                    <section class="left-menu__nav">
-                        <ul>
-                            <li class="left-menu__nav__location plus">
-                                <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Карелия
+                <div class="tab-pane left-menu__calendar" id="calendar">
+                    <div class="left-menu__calendar-header">Ближайшие рейсы (12.05)</div>
+                    <section class="left-menu__grouped-by-region">
+                        <div class="left-menu__grouped-by-region__block">
+                            <div class="left-menu__grouped-by-region__block__header">
+                                Карелия
+                            </div>
+                            <div class="left-menu__grouped-by-region__block__item">
+                                <div class="left-menu__grouped-by-region__block__calendar">
+                                    <div class="left-menu__grouped-by-region__block__calendar__date">
+                                        <span class="numeric">15</span>
+                                        <span class="month">апр</span>
+                                    </div>
+                                    <span class="day-of-week">Вт</span>
                                 </div>
-                                <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
-                                </ul>
-                            </li>
-                            <li class="left-menu__nav__location plus">
-                                <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Ленинградская область
+                                <div class="left-menu__grouped-by-region__block__text">
+                                    <span>10 чудес. Все лучшее за два дня</span>
+                                    <span
+                                        class="left-menu__grouped-by-region__block__text__price">от&nbsp;2300&nbsp;руб.&nbsp;/&nbsp;чел</span>
+                                    <span class="left-menu__grouped-by-region__block__text__places">Есть места</span>
                                 </div>
-                                <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
-                                </ul>
-                            </li>
-                            <li class="left-menu__nav__location plus">
-                                <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Новгород
+                                <a href="#" class="calendar-arrow"><img src="./img/calendar-arrow.svg"
+                                        alt="calendar-arrow"></a>
+                            </div>
+                            <div class="left-menu__grouped-by-region__block__item">
+                                <div class="left-menu__grouped-by-region__block__calendar">
+                                    <div class="left-menu__grouped-by-region__block__calendar__date">
+                                        <span class="numeric">16</span>
+                                        <span class="month">апр</span>
+                                    </div>
+                                    <span class="day-of-week">Вт</span>
                                 </div>
-                                <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
-                                </ul>
-                            </li>
-                            <li class="left-menu__nav__location plus">
-                                <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Псков
+                                <div class="left-menu__grouped-by-region__block__text">
+                                    <span>10 чудес. Все лучшее за два дня</span>
+                                    <span
+                                        class="left-menu__grouped-by-region__block__text__price">от&nbsp;2300&nbsp;руб.&nbsp;/&nbsp;чел</span>
+                                    <span class="left-menu__grouped-by-region__block__text__places">Есть места</span>
                                 </div>
-                                <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
-                                </ul>
-                            </li>
-                            <li class="left-menu__nav__location">Вологда</li>
-                            <li class="left-menu__nav__location">Тверь</li>
-                            <li class="left-menu__nav__location">Золотое кольцо</li>
-                            <li class="left-menu__nav__location">Калининград</li>
-                            <li class="left-menu__nav__location">Бесплатная Финляндия</li>
-                            <li class="left-menu__nav__location">Туры для групп</li>
-                            <li class="left-menu__nav__location">События</li>
-                        </ul>
+                                <a href="#" class="calendar-arrow"><img src="./img/calendar-arrow.svg"
+                                        alt="calendar-arrow"></a>
+                            </div>
+                            <div class="left-menu__grouped-by-region__block__item">
+                                <div class="left-menu__grouped-by-region__block__calendar">
+                                    <div class="left-menu__grouped-by-region__block__calendar__date">
+                                        <span class="numeric">20</span>
+                                        <span class="month">апр</span>
+                                    </div>
+                                    <span class="day-of-week">Вт</span>
+                                </div>
+                                <div class="left-menu__grouped-by-region__block__text">
+                                    <span>10 чудес. Все лучшее за два дня</span>
+                                    <span
+                                        class="left-menu__grouped-by-region__block__text__price">от&nbsp;2300&nbsp;руб.&nbsp;/&nbsp;чел</span>
+                                    <span class="left-menu__grouped-by-region__block__text__places">Есть места</span>
+                                </div>
+                                <a href="#" class="calendar-arrow"><img src="./img/calendar-arrow.svg"
+                                        alt="calendar-arrow"></a>
+                            </div>
+                        </div>
+                        <div class="left-menu__grouped-by-region__block">
+                            <div class="left-menu__grouped-by-region__block__header">
+                                Псков
+                            </div>
+                            <div class="left-menu__grouped-by-region__block__item">
+                                <div class="left-menu__grouped-by-region__block__calendar">
+                                    <div class="left-menu__grouped-by-region__block__calendar__date">
+                                        <span class="numeric">15</span>
+                                        <span class="month">апр</span>
+                                    </div>
+                                    <span class="day-of-week">Вт</span>
+                                </div>
+                                <div class="left-menu__grouped-by-region__block__text">
+                                    <span>10 чудес. Все лучшее за два дня</span>
+                                    <span
+                                        class="left-menu__grouped-by-region__block__text__price">от&nbsp;2300&nbsp;руб.&nbsp;/&nbsp;чел</span>
+                                    <span class="left-menu__grouped-by-region__block__text__places">Есть места</span>
+                                </div>
+                                <a href="#" class="calendar-arrow"><img src="./img/calendar-arrow.svg"
+                                        alt="calendar-arrow"></a>
+                            </div>
+                            <div class="left-menu__grouped-by-region__block__item">
+                                <div class="left-menu__grouped-by-region__block__calendar">
+                                    <div class="left-menu__grouped-by-region__block__calendar__date">
+                                        <span class="numeric">15</span>
+                                        <span class="month">апр</span>
+                                    </div>
+                                    <span class="day-of-week">Вт</span>
+                                </div>
+                                <div class="left-menu__grouped-by-region__block__text">
+                                    <span>10 чудес. Все лучшее за два дня</span>
+                                    <span
+                                        class="left-menu__grouped-by-region__block__text__price">от&nbsp;2300&nbsp;руб.&nbsp;/&nbsp;чел</span>
+                                    <span class="left-menu__grouped-by-region__block__text__places">Есть места</span>
+                                </div>
+                                <a href="#" class="calendar-arrow"><img src="./img/calendar-arrow.svg"
+                                        alt="calendar-arrow"></a>
+                            </div>
+                        </div>
                     </section>
+                    <a href="#" class="red-button schedule">Расписание рейсов</a>
                 </div>
-                <div class="tab-pane " id="menu">
+                <div class="tab-pane active" id="menu">
                     <div class="left-menu__header">🔥 Горящие туры</div>
                     <section class="left-menu__nav">
                         <ul>
                             <li class="left-menu__nav__location plus">
                                 <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Карелия
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Карелия
                                 </div>
                                 <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Карелию на 1 день</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Карелию на 2 дня</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Карелию на 3 дня</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Карелию от 4 до 8 дней</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры на Валаам</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры на остров Кижи</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Карелию на Ретропоезде</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры из Петрозаводска</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры на Соловецкие острова</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры к Мраморному каньону Рускеала</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="left-menu__nav__location plus">
                                 <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Ленинградская область
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Ленинградская
+                                    область
                                 </div>
                                 <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры по Ленинградской обл. на 1 день</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="left-menu__nav__location plus">
                                 <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Новгород
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Новгород
                                 </div>
                                 <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Новгородскую область на 1 день</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Новгородскую область на 2 дня</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="left-menu__nav__location plus">
                                 <div class="left-menu__nav__location__header">
-                                    <span class="left-menu__nav__location__header__icon"></span> Псков
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Псков
                                 </div>
                                 <ul class="left-menu__nav__submenu">
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 1 день</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 2 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на 3 дня</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию от 4 до 8 дней</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на Валаам</li>
-                                    <li class="left-menu__nav__submenu__item">Туры на остров Кижи</li>
-                                    <li class="left-menu__nav__submenu__item">Туры в Карелию на Ретропоезде</li>
-                                    <li class="left-menu__nav__submenu__item">Туры из Петрозаводска</li>
-                                    <li class="left-menu__nav__submenu__item"> Туры на Соловецкие острова</li>
-                                    <li class="left-menu__nav__submenu__item">Туры к Мраморному каньону Рускеала</li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Псков на 1 день</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Псков и Пушкинские горы на 2 дня</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="left-menu__nav__location">Вологда</li>
-                            <li class="left-menu__nav__location">Тверь</li>
-                            <li class="left-menu__nav__location">Золотое кольцо</li>
-                            <li class="left-menu__nav__location">Калининград</li>
-                            <li class="left-menu__nav__location">Бесплатная Финляндия</li>
-                            <li class="left-menu__nav__location">Туры для групп</li>
-                            <li class="left-menu__nav__location">События</li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Вологда
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Вологду 2-8 дней</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Тверь
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Тверь на 2-5 дней</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Золотое кольцо
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры по Золотому кольцу на 2-10 дней</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Калининград
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры в Калининград на 2-11 дней</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Бесплатная
+                                    Финляндия
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Бесплатная Финляндия</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;Туры для групп
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Туры для групп</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="left-menu__nav__location plus">
+                                <div class="left-menu__nav__location__header">
+                                    <span class="left-menu__nav__location__header__icon"></span>&nbsp;События
+                                </div>
+                                <ul class="left-menu__nav__submenu">
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Календарь событий</a>
+                                    </li>
+                                    <li class="left-menu__nav__submenu__item">
+                                        <a href="#">Событийные туры</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
                         </ul>
                     </section>
                 </div>
+                <div class="registry ">
+                    <svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M36 14.06C35.4574 13.8489 33.621 14.0178 32.9532 14.2289C33.6628 13.9333 35.4157 12.6667 35.4157 11.6533C33.9966 11.78 32.7863 12.6667 31.4925 13.3C32.4941 12.6667 34.0384 11.4 34.414 10.6822C34.9566 9.62667 34.8731 8.82444 34.581 8.57111C34.2053 9.07778 31.8681 11.3156 30.8247 11.9067C31.6177 11.1044 32.7863 9.66889 33.2454 8.90889C33.5793 8.40222 34.2053 6.33333 33.2454 5.61556C32.9115 7.00889 31.242 9.45778 30.1569 10.3022C30.1569 10.2178 30.1151 9.92222 30.0734 10.0067C29.5726 10.9778 28.8213 11.9489 28.237 12.4133C28.237 12.2444 28.1953 11.9489 28.1535 12.0333C27.6527 12.8778 26.9014 13.5533 26.1084 14.1022C25.6911 14.3556 24.9398 14.9889 25.2737 15.58C25.5659 16.1289 25.8997 16.3822 26.0667 17.0156C26.2336 17.7756 25.4406 18.4089 25.3154 18.4511C24.439 18.8311 23.6877 18.4511 22.8947 17.5644C23.2286 17.5644 24.3555 17.5644 24.1885 16.2133C23.479 16.7622 22.2687 16.6778 21.8096 15.8756C22.3939 16.1711 23.1034 15.6222 23.2703 15.2844C22.9782 15.3689 22.4773 15.6222 21.7261 15.0733C21.1418 14.6511 21.267 13.4689 21.4757 12.8778C21.6009 12.54 21.8513 12.1178 22.06 11.9067C22.3104 11.6533 22.5608 11.2733 23.2703 11.1044C23.2286 11.2311 23.2703 11.4844 23.5208 11.4C24.0633 11.2733 24.439 11.1044 25.0233 11.4422C25.232 11.5689 25.2737 11.9911 25.065 12.2867C25.6911 12.2867 25.8163 11.5689 25.5241 11.2311C26.8597 11.7378 27.8196 11.6533 28.0283 10.8511C27.6944 11.02 27.3605 11.1889 26.8179 11.1044C26.1084 11.02 25.7328 10.5556 24.7311 10.5133C26.1502 9.83778 26.8179 10.4289 26.8597 10.6822C27.6944 9.79556 27.2771 8.48667 25.7745 8.74C25.7745 8.48667 25.6911 8.40222 25.2737 8.40222C25.232 8.31778 25.1902 8.27555 25.1902 8.19111C25.6911 8.10667 26.9849 7.81111 27.4857 7.05111C27.9031 6.33333 27.0266 4.94 27.6527 4.94C27.8614 5.06667 28.2787 5.23556 28.5709 5.27778C28.9048 5.57333 29.1135 5.91111 28.8213 6.33333C28.4457 6.79778 28.237 6.96667 28.237 7.64222C28.2787 8.14889 28.863 8.52889 28.9465 8.82444C28.9883 8.95111 28.9048 9.12 28.6544 9.24667C29.1969 9.5 29.4474 9.12 29.4891 8.65555C29.5308 8.27555 29.2387 7.98 29.0717 7.64222C29.2387 7.89556 29.5726 8.02222 29.8647 7.98C30.1151 7.93778 30.4908 8.06444 30.4908 8.36C31.2003 7.55778 30.0734 7.22 29.9065 7.00889C29.8647 6.67111 30.3656 6.46 30.4073 6.03778C30.449 5.7 30.3238 5.36222 29.656 5.10889C29.03 4.85556 28.7378 4.47556 28.1953 3.96889C27.7362 3.54667 26.8597 3.50444 26.5258 4.05333C26.2754 4.18 26.1084 4.43333 26.0667 4.60222C25.7745 5.61556 26.9014 5.95333 26.651 6.84C26.4841 7.43111 25.6911 7.89556 25.065 7.81111C25.0233 7.76889 24.9815 7.72667 24.9398 7.72667C24.9398 7.68444 24.9398 7.6 24.9398 7.55778C24.9398 7.22 25.3154 6.88222 25.4406 6.41778C25.5659 5.99556 25.1485 5.19333 24.4807 5.40444C24.4807 5.36222 24.4807 5.32 24.3972 5.32C24.3138 5.32 24.272 5.40444 24.272 5.48889C24.1885 5.48889 24.0633 5.53111 24.0216 5.53111C24.0216 5.48889 24.0216 5.44667 24.0216 5.36222C24.0216 5.32 24.0216 5.32 23.9799 5.32C23.9381 5.32 23.8964 5.32 23.8547 5.32C23.9799 5.27778 24.2303 4.94 23.8547 4.68667V4.51778H24.1051V4.30667H23.8547V4.01111H23.6042V4.30667H23.4373V4.51778H23.6877V4.68667C23.3121 4.94 23.6042 5.27778 23.6877 5.32C23.646 5.32 23.6042 5.32 23.5625 5.32C23.5208 5.32 23.5208 5.32 23.5208 5.36222C23.5208 5.40444 23.5208 5.44667 23.5208 5.53111C23.479 5.53111 23.3538 5.48889 23.2703 5.48889C23.2286 5.40444 23.1869 5.32 23.1451 5.32C23.0617 5.32 23.0617 5.36222 23.0617 5.40444C22.3939 5.19333 22.0182 5.99556 22.1017 6.41778C22.2269 6.88222 22.6026 7.22 22.6026 7.55778C22.6026 7.6 22.6026 7.64222 22.6026 7.72667C22.5608 7.72667 22.5191 7.76889 22.4356 7.76889C21.5591 7.64222 20.5575 6.71333 19.8897 6.24889L19.8479 6.20667C20.0149 6.03778 20.0149 5.78444 19.9731 5.65778C19.9731 5.10889 20.5992 4.56 20.7661 3.84222C20.9331 3.16667 20.307 1.9 19.2636 2.19556C19.2636 2.15333 19.2636 2.06889 19.1384 2.02667C19.0132 2.02667 18.9715 2.15333 18.9297 2.28C18.8463 2.28 18.5958 2.32222 18.5541 2.36444C18.5541 2.28 18.5541 2.19556 18.5541 2.11111C18.5541 2.06889 18.5541 2.06889 18.5124 2.06889C18.4706 2.06889 18.3872 2.06889 18.3454 2.06889C18.5541 1.98444 18.9297 1.43556 18.3454 1.05556V0.802222H18.7628L18.8463 0.464444H18.4289V0L18.0115 0.0422222V0.464444H17.5942V0.844444H18.0115V1.09778C17.3855 1.52 17.8446 2.02667 18.0115 2.11111C17.9698 2.11111 17.8863 2.11111 17.8446 2.11111C17.8028 2.11111 17.8028 2.11111 17.8028 2.15333C17.8028 2.23778 17.8028 2.32222 17.8028 2.40667C17.7194 2.36444 17.5107 2.36444 17.4272 2.32222C17.3855 2.19556 17.302 2.06889 17.2185 2.06889C17.0933 2.06889 17.0933 2.15333 17.0933 2.23778C16.0082 1.9 15.3821 3.20889 15.5908 3.88444C15.7995 4.60222 16.3838 5.19333 16.3838 5.7C16.3421 5.82667 16.3421 6.08 16.509 6.24889C15.8412 6.71333 14.8395 7.68444 13.9213 7.81111C13.8796 7.81111 13.8379 7.76889 13.7544 7.76889C13.7544 7.72667 13.7544 7.64222 13.7544 7.6C13.7544 7.26222 14.13 6.92445 14.2552 6.46C14.3804 6.03778 13.9631 5.23556 13.2953 5.44667C13.2953 5.40444 13.2953 5.36222 13.2118 5.36222C13.1283 5.36222 13.0866 5.44667 13.0866 5.53111C13.0031 5.53111 12.8779 5.57333 12.8362 5.57333C12.8362 5.53111 12.8362 5.48889 12.8362 5.40444C12.8362 5.36222 12.8362 5.36222 12.7945 5.36222C12.7527 5.36222 12.711 5.36222 12.6692 5.36222C12.7945 5.32 13.0449 4.98222 12.6692 4.72889V4.56H12.9197V4.34889H12.6692V4.05333H12.4188V4.34889H12.1684V4.56H12.4188V4.72889C12.0432 4.98222 12.3353 5.32 12.4188 5.36222C12.3771 5.36222 12.3353 5.36222 12.2936 5.36222C12.2519 5.36222 12.2519 5.36222 12.2519 5.40444C12.2519 5.44667 12.2519 5.48889 12.2519 5.57333C12.2101 5.57333 12.0849 5.53111 12.0015 5.53111C11.9597 5.44667 11.918 5.36222 11.8762 5.36222C11.7928 5.36222 11.7928 5.40444 11.7928 5.44667C11.125 5.23556 10.7494 6.03778 10.8328 6.46C10.958 6.92445 11.3337 7.26222 11.3337 7.6C11.3337 7.64222 11.3337 7.68444 11.3337 7.76889C11.2919 7.81111 11.2502 7.81111 11.2085 7.85333C10.6241 7.89556 9.78942 7.47333 9.62247 6.88222C9.37205 5.95333 10.4989 5.65778 10.2068 4.64444C10.165 4.47556 9.9981 4.22222 9.74768 4.09556C9.41379 3.54667 8.53732 3.58889 8.07821 4.01111C7.53564 4.51778 7.24348 4.94 6.61743 5.15111C5.94965 5.40444 5.82444 5.74222 5.86618 6.08C5.90791 6.50222 6.45049 6.71333 6.36701 7.05111C6.20007 7.26222 5.07318 7.6 5.7827 8.40222C5.7827 8.10667 6.15833 7.98 6.40875 8.02222C6.70091 8.06444 7.07654 7.89556 7.20175 7.68444C7.0348 8.02222 6.74264 8.31778 6.78438 8.69778C6.82612 9.16222 7.07654 9.5 7.61911 9.28889C7.36869 9.16222 7.32696 9.03555 7.32696 8.86667C7.41043 8.52889 7.99474 8.14889 8.03648 7.68444C8.07821 7.00889 7.8278 6.79778 7.45217 6.37556C7.11827 5.95333 7.32696 5.61556 7.70258 5.32C7.99474 5.27778 8.41211 5.10889 8.62079 4.98222C9.24684 4.98222 8.32863 6.37556 8.78774 7.09333C9.24684 7.89556 10.5824 8.19111 11.0833 8.23333C11.0833 8.31778 11.0415 8.36 10.9998 8.44444C10.6241 8.40222 10.4989 8.48667 10.4989 8.78222C8.99642 8.52889 8.62079 9.88 9.41379 10.7244C9.45552 10.5133 10.1233 9.88 11.5424 10.5556C10.5407 10.5978 10.165 11.0622 9.45552 11.1467C8.91295 11.1889 8.57905 11.0622 8.24516 10.8933C8.45384 11.6956 9.41379 11.78 10.7494 11.2733C10.4572 11.5689 10.5407 12.3289 11.2085 12.3289C10.9998 12.0333 10.9998 11.6111 11.2502 11.4844C11.8345 11.1044 12.2101 11.2733 12.7527 11.4422C13.0031 11.4844 13.0449 11.2733 13.0031 11.1467C13.7127 11.3578 14.0048 11.6956 14.2135 11.9489C14.4639 12.2022 14.6726 12.6244 14.7978 12.92C15.0065 13.5111 15.1317 14.6933 14.5474 15.1156C13.7544 15.7067 13.2953 15.4111 13.0031 15.3267C13.1283 15.6644 13.8379 16.2133 14.4639 15.9178C14.0465 16.72 12.8362 16.8044 12.0849 16.2556C11.918 17.6067 13.0449 17.6489 13.3788 17.6067C12.5858 18.4933 11.8345 18.8733 10.958 18.4933C10.8328 18.4089 10.0398 17.8178 10.2068 17.0578C10.3737 16.4244 10.7076 16.1711 10.9998 15.6222C11.3337 15.0311 10.5824 14.3978 10.165 14.1444C9.41379 13.5533 8.66253 12.92 8.11995 12.0756C8.07821 11.9911 7.99474 12.2867 8.03648 12.4556C7.45217 11.9911 6.70091 11.02 6.20007 10.0489C6.15833 9.96445 6.11659 10.26 6.11659 10.3444C5.03144 9.5 3.36198 7.05111 3.02809 5.65778C2.06814 6.41778 2.69419 8.44444 3.02809 8.95111C3.48719 9.75333 4.65581 11.1467 5.44881 11.9489C4.40539 11.3578 2.06814 9.12 1.69251 8.61333C1.40036 8.86667 1.31689 9.66889 1.85946 10.7244C2.23509 11.4422 3.73761 12.7089 4.78102 13.3422C3.48719 12.7089 2.27683 11.8644 0.857782 11.6956C0.899519 12.6667 2.65246 13.9333 3.32024 14.2711C2.65246 14.06 0.816046 13.8911 0.27347 14.1022C0.315207 14.2711 1.52557 15.3689 3.19503 15.8756C2.02641 15.9178 1.40036 16.0022 0.440417 16.2556C1.1082 16.9311 2.23509 17.3533 2.94461 17.48C2.48551 17.48 1.35862 17.6067 0.899519 18.0711C0.857782 18.1133 0.774309 18.1978 0.732573 18.24C0.774309 18.3244 0.899519 18.4511 0.941256 18.4933C1.02473 18.5356 1.1082 18.62 1.14994 18.6622C1.1082 18.7467 1.06647 18.8311 0.982992 18.8733C0.982992 18.8311 0.982992 18.7889 0.982992 18.7467C0.982992 18.7044 0.899519 18.62 0.857782 18.7044C0.857782 18.7044 0.857782 18.7044 0.857782 18.7467C0.857782 18.7467 0.857783 18.7467 0.816046 18.7467C0.816046 18.7467 0.816046 18.7044 0.774309 18.6622H0.816046V18.62H0.774309V18.5778H0.732573V18.62H0.899519C0.857782 18.6622 0.899519 18.7044 0.941256 18.6622C0.941256 18.6622 0.941256 18.6622 0.899519 18.6622C0.816046 18.6622 0.816046 18.7889 0.857782 18.7889C0.899519 18.8311 0.941256 18.8311 0.941256 18.8733C0.899519 19.0422 0.774309 19 0.732573 18.9578C0.6491 18.8733 0.774309 18.7889 0.690836 18.7044C0.690836 18.7044 0.6491 18.6622 0.607363 18.6622C0.565626 18.62 0.482153 18.6622 0.482153 18.7467C0.440417 18.8311 0.440417 18.8733 0.39868 18.9156C0.356943 18.9578 0.356943 19 0.356943 19.0422C0.39868 19.0844 0.440417 19.0844 0.440417 19.1267C0.440417 19.1689 0.315207 19.2533 0.440417 19.2956C0.440417 19.2533 0.440417 19.2533 0.482153 19.2111C0.52389 19.2111 0.52389 19.1689 0.565626 19.1267C0.565626 19.1689 0.565626 19.2111 0.565626 19.2533C0.607363 19.2956 0.6491 19.3378 0.690836 19.2956C0.6491 19.2956 0.649099 19.2956 0.649099 19.2533C0.649099 19.2111 0.690836 19.1689 0.649099 19.0844C0.607363 19.0422 0.565626 19.0422 0.52389 19C0.482153 18.9578 0.482153 18.9156 0.482153 18.8733C0.52389 18.8733 0.52389 18.8311 0.565626 18.7889C0.649099 18.7467 0.607363 18.9578 0.690836 19C0.732573 19.0844 0.899519 19.0422 0.941256 19.0422C0.941256 19.0422 0.941256 19.0422 0.941256 19.0844C0.899519 19.0844 0.899519 19.0844 0.899519 19.1267C0.732573 19.1689 0.774309 19.2956 0.857782 19.38C0.857782 19.3378 0.899519 19.2533 1.06647 19.2533C0.982992 19.2956 0.941256 19.38 0.899519 19.4222C0.857782 19.4644 0.816046 19.4644 0.774309 19.4644C0.816046 19.5489 0.941256 19.5067 1.02473 19.38C1.02473 19.4222 1.06647 19.5067 1.1082 19.4644C1.06647 19.4644 1.06647 19.4222 1.06647 19.38C1.1082 19.3378 1.14994 19.3378 1.23341 19.2956C1.27515 19.2956 1.27515 19.2533 1.23341 19.2533C1.31689 19.2533 1.35862 19.2533 1.40036 19.2956C1.44209 19.2956 1.48383 19.3378 1.48383 19.38C1.52557 19.4222 1.60904 19.5489 1.5673 19.5911C1.52557 19.6756 1.44209 19.6756 1.40036 19.6756C1.44209 19.7178 1.52557 19.7178 1.5673 19.6756C1.5673 19.76 1.4421 19.8444 1.35862 19.8022C1.40036 19.9289 1.52557 19.8867 1.5673 19.8867C1.52557 20.0133 1.48383 20.0978 1.35862 20.0978C1.35862 20.0978 1.23341 20.0556 1.23341 19.9711C1.23341 19.8867 1.23341 19.8444 1.23341 19.8022C1.23341 19.7178 1.14994 19.7178 1.1082 19.6756C1.02473 19.6333 0.899519 19.6333 0.816046 19.5489V19.5911C0.732573 19.5911 0.607363 19.5067 0.52389 19.4222V19.4644C0.39868 19.4222 0.106524 19.2533 0.0230505 19.1267C-0.0604227 19.2533 0.106524 19.4222 0.14826 19.4644C0.231733 19.5067 0.39868 19.6333 0.52389 19.6756C0.39868 19.6756 0.0647871 19.5489 0.0230505 19.5067C0.0230505 19.5489 0.0230504 19.6333 0.14826 19.7178C0.231733 19.76 0.440416 19.8444 0.565626 19.8444C0.39868 19.8444 0.231733 19.8022 0.106524 19.8444C0.14826 19.9289 0.39868 20.0133 0.482153 20.0133C0.39868 20.0133 0.231734 20.0978 0.189997 20.14C0.189997 20.14 0.356943 20.2244 0.565626 20.1822C0.440416 20.2244 0.39868 20.2667 0.315207 20.3511C0.39868 20.3933 0.52389 20.3933 0.607363 20.3511C0.565626 20.3511 0.440417 20.4356 0.39868 20.52V20.5622C0.482153 20.6044 0.565626 20.5622 0.690836 20.52C0.607363 20.6044 0.565626 20.6467 0.565626 20.7311C0.649099 20.7311 0.732573 20.6889 0.774309 20.6467C0.774309 20.6889 0.732573 20.7311 0.732573 20.8156C0.732573 20.8578 0.774309 20.8578 0.774309 20.8578C0.774309 20.8578 0.774309 20.9 0.816046 20.9C0.941256 21.0267 1.14994 21.1956 1.27515 21.3222C1.27515 21.3644 1.31689 21.3644 1.31689 21.3644L1.35862 21.4489C1.35862 21.4911 1.40036 21.4911 1.40036 21.4911C1.40036 21.5333 1.4421 21.5333 1.4421 21.5333C1.4421 21.5756 1.4421 21.6178 1.4421 21.6178C1.4421 21.66 1.48383 21.66 1.48383 21.66C1.48383 21.66 1.48383 21.66 1.48383 21.7022C1.48383 21.7444 1.48383 21.7444 1.52557 21.7444H1.5673C1.5673 21.7444 1.5673 21.7867 1.60904 21.7867C1.65078 21.7867 1.69251 21.7867 1.69251 21.7867C1.65078 21.7867 1.69251 21.8289 1.73425 21.8289C1.73425 21.8289 1.77599 21.8711 1.77599 21.8289C1.77599 21.8711 1.81772 21.8289 1.81772 21.8289C1.85946 21.8711 1.85946 21.8289 1.81772 21.7867C1.81772 21.7444 1.81772 21.7444 1.77599 21.7444C1.77599 21.7022 1.77599 21.7022 1.73425 21.7022C1.73425 21.7022 1.73425 21.66 1.69251 21.7022C1.69251 21.7022 1.69251 21.66 1.65078 21.66C1.77599 21.4489 1.9012 21.3644 2.06814 21.28C2.10988 21.2378 2.15162 21.2378 2.10988 21.1956C2.06814 21.1956 2.02641 21.1533 2.02641 21.1111C2.06814 21.1111 2.15162 21.0689 2.15162 21.0267C2.06814 21.1111 1.98467 20.9844 2.02641 20.9422C2.06814 20.9 2.15162 20.8156 2.23509 20.9C2.23509 20.9 2.23509 20.9 2.23509 20.8578C2.31856 20.9 2.3603 20.9844 2.31856 21.0267C2.27683 21.1111 2.23509 21.1533 2.27683 21.1956C2.31856 21.1111 2.31856 21.1533 2.3603 21.1111C2.31856 21.1956 2.19335 21.3222 2.15162 21.4067C2.10988 21.4911 2.02641 21.4911 2.02641 21.4489C2.02641 21.4067 2.02641 21.4067 2.02641 21.4067C1.94293 21.4489 1.94293 21.5756 2.06814 21.5756C1.98467 21.7022 2.10988 21.8289 2.15162 21.8289C2.15162 21.8289 2.15162 21.7444 2.15162 21.7022C2.23509 21.8711 2.3603 21.8711 2.44377 21.7444C2.48551 21.7867 2.52725 21.7867 2.56898 21.7867C2.61072 21.7867 2.65246 21.7444 2.69419 21.7444C2.65246 21.8289 2.61072 21.8711 2.61072 21.9556C2.61072 22.1667 2.69419 22.3778 2.98635 22.4622C2.98635 22.6311 2.98635 22.8 3.19503 22.8422C3.86282 24.2356 4.8645 26.6 5.57402 27.9933C5.49055 28.2889 5.74097 28.5422 5.90791 28.5C5.90791 28.6267 6.03312 29.3867 6.07486 29.4711C5.86618 29.8511 6.24181 30.0622 6.40875 29.9778C6.40875 30.2311 6.49222 30.4 6.49222 30.6533C6.32528 30.9489 6.20007 31.3289 6.11659 31.4978C5.99138 31.7933 6.15833 31.92 6.45049 31.8778C6.45049 31.92 6.40875 31.9622 6.36701 32.0889C6.36701 32.3 6.36701 32.3844 6.65917 32.4689C6.78438 32.4689 6.90959 32.4689 7.0348 32.4689C6.86785 32.5956 6.86785 32.8911 7.11827 32.9756C7.4939 33.06 7.86953 33.2289 7.953 33.3978C7.70258 33.4822 7.953 33.6933 8.07821 33.6511C8.11995 33.8622 8.20342 33.9467 8.45384 33.9889C8.49558 34.2844 8.62079 34.2422 8.82947 34.2844C9.12163 34.6644 9.16337 34.4533 9.03816 34.1578C9.16337 33.8622 9.07989 33.82 8.95468 33.7356C9.07989 33.5667 9.03816 33.3556 8.95468 33.2289C9.03816 33.1022 8.95468 32.8067 8.78774 33.0178C8.746 32.9333 8.746 32.68 8.70426 32.6378C10.3737 31.16 11.9597 31.0333 13.5457 30.9911C14.13 30.9067 14.2552 30.78 14.0883 30.4844C13.8796 30.3156 13.5874 29.8511 13.504 29.5978C13.5457 29.64 13.5874 29.64 13.6292 29.6822C14.0048 29.9778 14.7561 29.8933 14.923 29.3022C13.8796 29.5978 13.6709 28.3733 14.0465 27.9511C14.4639 27.5289 15.6743 27.4444 16.0082 28.5422C16.0499 28.4578 16.0916 28.3733 16.0916 28.2467C16.7594 29.0911 16.5925 29.6822 16.0499 29.9356C15.3404 30.3156 14.9648 30.5689 15.0065 31.0333C15.5908 30.6111 15.6325 30.8644 16.2586 30.5267C15.6325 31.1178 14.0883 31.4978 13.3788 32.2156C12.6275 32.9333 12.2101 32.5533 12.1684 32.1311C12.1684 31.92 12.2101 31.7933 12.2519 31.6667C11.3337 31.54 11.0415 32.8911 11.7928 33.3133C10.4155 34.2 11.2502 35.5511 11.7093 35.8467C11.7093 35.6356 12.0432 34.96 12.3353 34.7911C12.5023 36.6067 13.5874 36.86 14.5891 36.0578C14.7143 36.3533 15.2152 36.7333 15.6325 36.86C16.2586 37.0289 16.676 36.9022 17.0933 36.6067C17.1351 37.1978 17.6776 37.8733 18.1785 38C18.6793 37.8733 19.1802 37.1978 19.2636 36.6067C19.681 36.9022 20.0984 37.0289 20.7244 36.86C21.1418 36.7333 21.6426 36.3533 21.7678 36.0578C22.7695 36.86 23.8547 36.6067 24.0216 34.7911C24.3138 34.96 24.6476 35.6356 24.6476 35.8467C25.1068 35.5511 25.9415 34.2 24.5642 33.3133C25.3154 32.8911 25.0233 31.5822 24.1051 31.6667C24.1468 31.7933 24.1885 31.8778 24.1885 32.1311C24.1468 32.5533 23.7294 32.9333 22.9782 32.2156C22.2269 31.4978 20.7244 31.0756 20.0984 30.5267C20.7244 30.8644 20.7661 30.6111 21.3505 31.0333C21.3922 30.5267 21.0166 30.2733 20.307 29.9356C19.7645 29.6822 19.5975 29.0911 20.2653 28.2467C20.307 28.3733 20.307 28.5 20.3488 28.5422C20.6827 27.4444 21.893 27.5289 22.3104 27.9511C22.686 28.3733 22.4773 29.5978 21.4339 29.3022C21.6009 29.8511 22.3521 29.9778 22.7278 29.6822C22.7278 29.8089 22.853 29.9356 22.5608 30.3156C22.06 30.9067 22.6443 31.0756 22.853 31.0756C24.0216 30.9911 24.272 31.2022 25.3154 31.4556C26.025 31.6244 26.9014 31.4133 28.1118 32.2578C28.4039 32.5111 28.5292 32.5111 28.9048 32.6378C28.9883 32.68 29.3639 32.68 29.4474 32.3844C29.7812 32.5533 30.2821 31.92 31.1586 31.92C31.4925 31.92 31.6594 31.54 31.6177 31.3711C31.7846 31.2867 32.2854 30.78 32.3272 30.4844C32.5776 30.5689 32.7028 30.2733 32.5359 30.1467C32.7863 30.2311 32.9115 29.7244 32.6611 29.6822C32.828 29.5978 32.7445 29.26 32.4941 29.26C32.3272 28.2467 31.6177 27.74 31.0333 27.5289C30.9916 27.1911 30.6995 27.2333 30.616 27.4022C30.616 27.3178 30.5742 27.2756 30.5742 27.2333V26.8533H30.9499V26.4311H30.5742V26.0511H30.1569V26.4311H29.7812V26.8533H30.1569V27.2333C30.1151 27.1911 30.1151 27.2333 30.1151 27.2756C29.9899 27.0222 29.6978 27.2333 29.6978 27.4867C28.9883 27.74 28.4874 28.2467 28.3205 29.0067C28.1118 29.0489 28.1118 29.3022 28.1953 29.3867C27.8196 29.4711 27.9448 29.9356 28.237 29.8933C28.07 29.9356 28.1118 30.2733 28.3205 30.2311C28.3622 30.4 28.3205 30.4422 28.4457 30.6111C27.9448 30.9067 28.1535 31.2867 26.4423 30.9911C25.8163 30.8644 24.8563 30.5267 24.272 29.8511C24.3972 29.7667 24.439 29.5556 24.4807 29.3867C24.5642 29.6822 24.6894 29.8933 24.9398 30.0622C24.8981 29.8933 24.8981 29.6822 24.9815 29.3867C25.065 29.8089 25.5241 30.2311 25.8997 29.9778C25.7328 29.8089 25.3989 29.64 25.5241 28.8378C25.6493 29.0911 26.3588 29.6822 26.9849 29.0489C25.8997 28.8378 26.4423 27.4444 26.2336 26.6844C26.1084 26.2622 25.8163 25.7978 24.6476 25.7556C24.7729 25.6711 24.9398 25.46 24.8981 25.2489C24.3972 25.5022 23.5208 25.4178 23.1451 24.4467C23.2703 24.5733 23.479 24.6156 23.646 24.4889C23.3121 23.8978 23.1034 23.3489 23.2703 22.6311C23.5625 22.42 23.8546 22.1244 23.9381 21.7867C23.9799 22.2089 24.1885 22.42 24.6059 22.6733C24.6894 22.6311 24.9398 22.3778 25.1067 22.1667C25.0233 22.7156 24.8563 23.6867 25.1485 24.2778C25.3572 24.7 25.6076 24.8689 25.9415 25.1222C26.1084 24.9956 26.4841 24.6156 26.5258 24.1089C26.6093 23.56 26.4423 22.8422 26.2336 22.2511C26.2754 22.2511 26.3171 22.2511 26.4006 22.2511C26.4423 22.2089 26.5675 22.0822 26.6093 21.8711C26.6927 22.4622 26.9014 23.4756 27.0684 24.0667C27.1936 24.4467 27.7779 25.1644 28.1953 25.2067C28.5292 24.8267 28.6126 24.32 28.4874 23.8133C28.3622 23.2644 27.9031 22.2089 27.6527 21.8289C27.6527 21.8289 27.6944 21.8289 27.7362 21.8289C27.7779 21.66 27.8196 21.3644 27.8196 21.1111C28.1535 21.9133 28.5709 22.8844 28.9465 23.6867C29.03 23.8978 29.6143 24.4044 30.2821 24.4467C30.449 24.1089 30.5742 23.8133 30.449 23.3067C30.3238 22.7578 29.1969 21.1956 29.03 20.9844C28.9883 20.9422 29.0717 20.9 29.0717 20.9422C29.2387 21.1956 29.8647 21.9556 30.4073 22.6733C30.8664 23.2644 31.409 23.6444 32.1185 23.4333C32.2437 22.9689 32.1602 22.6311 31.8681 22.2511C31.5342 21.7867 30.9081 21.2378 29.9482 20.2667C30.616 20.7311 31.9098 21.9556 32.8698 21.9556C33.2454 21.9556 33.621 21.7444 33.621 21.7022C33.6628 21.1111 32.8698 20.5622 32.5776 20.3511C33.4958 20.5622 33.9966 20.4778 34.7062 20.14C34.4557 19.5489 33.5375 19.0844 32.7445 18.9156C33.9549 19 34.6644 18.7889 35.374 18.24C35.4574 18.1556 35.4574 18.0711 35.4157 17.9867C34.9566 17.48 33.7045 17.3533 33.2454 17.3533C33.9549 17.2267 35.1235 16.8044 35.7496 16.1289C34.7896 15.8756 34.1636 15.7489 32.995 15.7489C34.7479 15.3267 35.9583 14.2289 36 14.06ZM0.982992 18.9578C0.941256 18.9578 0.941256 18.9578 0.982992 18.9578C0.982992 18.9156 0.982992 18.9156 1.06647 18.8733C1.1082 18.8311 1.14994 18.8311 1.19168 18.8311C1.1082 18.8733 1.06647 18.9156 0.982992 18.9578ZM3.44545 20.6889C3.36198 20.6889 3.27851 20.7311 3.19503 20.6467V20.6044C3.19503 20.6467 3.23677 20.6467 3.27851 20.6467C3.27851 20.6467 3.27851 20.6044 3.23677 20.5622C3.27851 20.6044 3.32024 20.6044 3.36198 20.5622C3.36198 20.5622 3.32024 20.5622 3.32024 20.52C3.40372 20.52 3.52893 20.52 3.6124 20.4778C3.6124 20.4778 3.6124 20.4778 3.65414 20.52C3.65414 20.52 3.65413 20.5622 3.6124 20.5622C3.57066 20.5622 3.57066 20.6044 3.52893 20.6044C3.48719 20.6467 3.48719 20.6467 3.44545 20.6889ZM6.03312 27.6978C5.15665 26.0089 4.23845 24.2356 3.52893 22.6311C3.6124 22.5044 3.57066 22.2089 3.40372 22.2089C3.40372 22.1667 3.44545 22.1244 3.44545 22.0822H3.48719C4.44713 22.0822 5.74097 20.8578 6.40875 20.3933C5.44881 21.3222 4.82276 21.8711 4.48887 22.3778C4.23845 22.7578 4.15497 23.0956 4.23845 23.56C4.94797 23.7711 5.49055 23.3911 5.94965 22.8C6.49222 22.0822 7.07654 21.3222 7.28522 21.0689C7.32696 21.0267 7.36869 21.0689 7.32696 21.1111C7.20175 21.3222 6.07486 22.8844 5.90791 23.4333C5.7827 23.94 5.90791 24.2356 6.07486 24.5733C6.74264 24.5311 7.32696 24.0244 7.41043 23.8133C7.74432 23.0111 8.20342 22.04 8.53732 21.2378C8.53732 21.4911 8.53732 21.7867 8.62079 21.9556C8.62079 21.9556 8.66253 21.9556 8.70426 21.9556C8.45384 22.3356 7.99474 23.3911 7.86953 23.94C7.70259 24.7422 7.99474 25.1644 8.20342 25.3333C8.62079 25.1644 9.07989 24.9533 9.28858 24.1933C9.45552 23.6022 9.66421 22.6311 9.74768 21.9978C9.78942 22.2089 9.91463 22.2933 9.95636 22.3778C10.0398 22.3778 10.0816 22.3778 10.1233 22.3778C9.91463 22.9689 9.74768 23.6867 9.83115 24.2356C9.91463 24.7422 10.2903 25.1222 10.4155 25.2489C10.7494 24.9533 10.9998 24.7844 11.2085 24.4044C11.5006 23.8133 11.3337 22.8422 11.2502 22.2933C11.4171 22.5467 11.7093 22.7578 11.751 22.8C12.1684 22.5467 12.3771 22.3356 12.4188 21.9133C12.5023 22.2511 12.8362 22.5467 13.0866 22.7578C13.2118 23.5178 13.0449 24.0244 12.711 24.6156C12.8779 24.7422 13.0866 24.7 13.2118 24.5733C12.8779 25.5022 11.9597 25.5867 11.4589 25.3756C11.4171 25.5444 11.5841 25.7556 11.7093 25.8822C10.5407 25.8822 10.2485 26.3467 10.1233 26.8111C9.91463 27.5711 10.4572 28.9222 9.37205 29.1756C9.9981 29.7667 10.7076 29.2178 10.8328 28.9644C10.958 29.7667 10.6659 29.9356 10.4572 30.1044C10.8746 30.3578 11.3337 29.9356 11.3754 29.5133C11.4589 29.8089 11.4589 30.02 11.4171 30.1889C11.6676 30.02 11.7928 29.8089 11.8762 29.5133C11.8762 29.64 11.9597 29.8089 12.0432 29.9356C10.9163 30.9489 8.95468 31.4978 8.37037 30.1467C8.20342 29.8933 8.07821 29.8089 7.74432 30.02C7.24348 30.2311 7.32696 29.9356 7.0348 29.6822C7.11827 29.3867 7.07654 29.1756 6.82612 29.1333C6.70091 28.9222 6.36701 28.4578 6.20007 28.2889C6.40875 27.9933 6.28354 27.6978 6.03312 27.6978ZM18.5124 5.99556C18.5541 5.99556 18.5541 5.99556 18.5124 5.99556C18.5541 6.03778 18.5541 6.03778 18.5541 6.03778C18.5541 6.03778 18.5541 6.03778 18.5541 6.08C18.5541 6.08 18.5541 6.08 18.5541 6.12222C18.5541 6.16444 18.5958 6.16444 18.6376 6.20667C18.6376 6.20667 18.6376 6.24889 18.6793 6.24889C18.5124 6.24889 18.3454 6.24889 18.1785 6.24889C18.0115 6.24889 17.8446 6.24889 17.6776 6.24889C17.6776 6.24889 17.6776 6.24889 17.6776 6.20667C17.6776 6.20667 17.6776 6.20667 17.6776 6.16444C17.6776 6.16444 17.6776 6.12222 17.7194 6.12222C17.7194 6.12222 17.7194 6.12222 17.7194 6.08C17.7194 6.08 17.7194 6.08 17.7194 6.03778C17.7194 6.03778 17.7194 6.03778 17.7194 5.99556C17.7194 5.99556 17.7194 5.99556 17.7194 5.95333V5.91111C17.8028 5.91111 17.9281 5.91111 18.0115 5.91111C18.3037 5.95333 18.4289 5.95333 18.5124 5.99556C18.5124 5.95333 18.5124 5.95333 18.5124 5.99556ZM21.3087 8.69778C21.4339 8.74 21.6009 8.78222 21.8096 8.82444C21.8096 8.82444 21.8096 8.82444 21.8096 8.86667C21.3505 8.99333 20.8079 8.90889 20.474 8.82444C20.5992 9.12 20.9748 9.24667 21.1 9.24667C20.6409 9.92222 19.681 10.0067 19.2219 10.0489C19.4723 10.3022 19.8062 10.3444 20.0984 10.3444C19.8897 10.4289 19.3054 11.02 19.2636 11.1044C19.3888 11.1467 19.4306 11.1467 19.5558 11.1889C19.2219 11.4844 18.9715 11.8222 18.888 12.2444C18.9297 12.2444 19.0549 12.2444 19.0967 12.2444C18.8045 12.7511 18.5541 13.5111 18.5124 13.8489C18.4706 14.06 18.3454 14.44 18.2619 14.6511C18.1785 14.44 18.0533 14.06 18.0115 13.8489C17.9698 13.5111 17.7611 12.7089 17.4272 12.2444C17.469 12.2444 17.5942 12.2444 17.6359 12.2444C17.5524 11.8644 17.302 11.5267 16.9681 11.1889C17.0933 11.1467 17.1351 11.1467 17.2603 11.1044C17.2185 11.0622 16.5925 10.4711 16.4255 10.3444C16.7177 10.3444 17.0516 10.3022 17.302 10.0489C16.8429 10.0067 15.883 9.92222 15.4239 9.24667C15.5491 9.24667 15.9247 9.12 16.0499 8.82444C15.716 8.90889 15.1734 8.95111 14.7143 8.86667V8.82444C14.923 8.78222 15.0482 8.74 15.2152 8.69778C15.4656 8.57111 16.3421 8.14889 16.4255 7.85333C16.2169 7.85333 14.8395 8.14889 14.7561 8.06444C15.4656 7.85333 16.3421 7.6 17.469 6.58667C17.7194 6.58667 17.7194 6.62889 17.8446 6.62889C17.9698 6.62889 18.1367 6.62889 18.2619 6.62889C18.3872 6.62889 18.5541 6.62889 18.6793 6.62889C18.8045 6.62889 18.8463 6.58667 19.0549 6.58667C20.1401 7.6 21.0166 7.81111 21.7678 8.06444C21.6843 8.14889 20.3488 7.85333 20.0984 7.85333C20.1818 8.14889 21.0583 8.57111 21.3087 8.69778ZM17.469 29.5978C17.5524 29.5978 17.3437 30.6111 16.9681 31.16C16.2586 32.1733 15.5491 32.4689 15.2569 33.3556C15.2152 33.4822 14.923 33.6511 14.7143 33.6511C14.5474 33.1022 14.923 32.6378 15.09 32.4267C15.7578 31.5822 17.302 30.8644 17.469 29.5978ZM13.7544 34.2844C13.8796 34.4533 14.0883 34.5378 14.297 34.58C14.297 34.6644 14.297 34.6222 14.297 34.96C14.0048 34.8755 13.7544 34.5378 13.7544 34.2844ZM16.4673 33.82C17.0516 32.4689 17.7611 31.2444 17.7194 29.9356C18.1367 32.3844 15.8412 34.1156 17.1768 36.2267C15.9664 35.9311 16.1334 34.58 16.4673 33.82ZM18.7211 29.9356C18.6793 31.2022 19.3888 32.4267 19.9731 33.82C20.307 34.58 20.474 35.9311 19.2636 36.2689C20.5992 34.1156 18.3037 32.3844 18.7211 29.9356ZM22.1017 34.5378C22.3104 34.5378 22.5191 34.4533 22.6443 34.2422C22.6443 34.4956 22.3939 34.8333 22.1017 34.8756C22.1017 34.6222 22.1017 34.6222 22.1017 34.5378ZM21.6843 33.6511C21.4757 33.6511 21.1835 33.44 21.1418 33.3556C20.8496 32.5111 20.1401 32.1733 19.4306 31.16C19.0549 30.6111 18.8463 29.5978 18.9297 29.5978C19.0967 30.8644 20.6409 31.5822 21.267 32.4689C21.4757 32.68 21.8513 33.1444 21.6843 33.6511ZM2.65246 19.0422C2.65246 19.0844 2.65246 19.1267 2.65246 19.1689C2.69419 19.2111 2.73593 19.2111 2.77767 19.2956C2.69419 19.3378 2.65246 19.3378 2.56898 19.38C2.56898 19.3378 2.56898 19.3378 2.52725 19.2956C2.48551 19.38 2.3603 19.4222 2.27683 19.38C2.3603 19.38 2.40204 19.2956 2.40204 19.2533C2.3603 19.2533 2.31856 19.3378 2.23509 19.2956C2.15162 19.2956 2.10988 19.1689 2.10988 19.0844V19.0422C2.31856 19.0422 2.48551 19.0422 2.65246 19.0422ZM1.5673 19.0422C1.60904 19.0422 1.65078 19 1.65078 18.9578C1.60904 18.9578 1.48383 19 1.4421 18.9578C1.4421 18.9578 1.48383 18.9156 1.48383 18.8733C1.44209 18.9156 1.40036 18.9156 1.35862 18.9156L1.40036 18.8733C1.40036 18.8311 1.48383 18.7889 1.48383 18.7467C1.44209 18.7467 1.31689 18.8311 1.31689 18.8311C1.35862 18.7889 1.44209 18.7467 1.48383 18.6622C1.65078 18.7467 1.77599 18.8311 1.94293 18.8733C1.94293 18.9156 1.9012 18.9156 1.9012 18.9156C1.9012 18.9156 1.9012 18.9156 1.94293 18.9156C1.9012 18.9578 1.9012 19 1.9012 19.0422C1.9012 19.0844 1.9012 19.2111 1.9012 19.2111C1.9012 19.2533 1.9012 19.2956 1.9012 19.2956C1.9012 19.2956 1.85946 19.2533 1.85946 19.2111C1.85946 19.1689 1.77599 19.1267 1.73425 19.0844C1.69251 19.0422 1.65078 19.0422 1.60904 19C1.60904 19 1.60904 19 1.65078 19C1.65078 19.0422 1.5673 19.0422 1.5673 19.0422ZM1.60904 21.3644C1.5673 21.3644 1.5673 21.3222 1.52557 21.3644C1.48383 21.4067 1.48383 21.3644 1.4421 21.3644C1.4421 21.3222 1.44209 21.3222 1.40036 21.3222L1.31689 21.28C1.31689 21.2378 1.31688 21.2378 1.27515 21.2378C1.1082 21.1111 0.941256 20.9844 0.816046 20.8578C0.816046 20.8578 0.816046 20.8156 0.774309 20.8156C0.857782 20.7733 0.941256 20.6044 0.982992 20.52C0.941256 20.6044 0.899519 20.6889 0.857782 20.7311C0.857782 20.7733 0.857782 20.8156 0.899519 20.8578C0.982992 20.8578 1.02473 20.7733 1.02473 20.6889C1.06647 20.6044 1.06647 20.4778 1.06647 20.4778C1.06647 20.52 1.02473 20.6889 1.02473 20.7733C1.02473 20.8156 1.06647 20.8578 1.1082 20.9C1.19168 20.8578 1.19168 20.7733 1.19168 20.7733C1.19168 20.6889 1.19168 20.5622 1.19168 20.4778C1.19168 20.52 1.23341 20.52 1.23341 20.5622C1.23341 20.6044 1.23341 20.7311 1.23341 20.8156C1.27515 20.9844 1.40036 20.9422 1.40036 20.7733C1.40036 20.6889 1.35862 20.6044 1.35862 20.52L1.40036 20.5622C1.40036 20.6467 1.40036 20.6889 1.4421 20.7733C1.48383 20.8156 1.52557 20.8578 1.52557 20.8578C1.5673 20.8156 1.5673 20.7733 1.5673 20.7311C1.5673 20.6467 1.52557 20.5622 1.48383 20.52C1.52557 20.52 1.5673 20.5622 1.5673 20.5622C1.60904 20.52 1.60904 20.4778 1.60904 20.4356C1.65078 20.4778 1.69251 20.4778 1.69251 20.4778C1.73425 20.5622 1.73425 20.6044 1.73425 20.6889C1.77599 20.6889 1.77599 20.6889 1.77599 20.6467C1.77599 20.7733 1.69251 20.8156 1.65078 20.8156L1.69251 20.8578C1.5673 20.9 1.5673 20.9844 1.5673 21.0267C1.5673 21.1111 1.69251 21.2378 1.60904 21.28C1.69251 21.3222 1.73425 21.2378 1.73425 21.1956C1.77599 21.28 1.77599 21.3222 1.73425 21.3222C1.77599 21.3222 1.81772 21.28 1.81772 21.2378C1.81772 21.28 1.85946 21.28 1.85946 21.3222C1.85946 21.28 1.9012 21.28 1.85946 21.2378C1.85946 21.2378 1.85946 21.28 1.9012 21.28C1.9012 21.3222 1.69251 21.4489 1.60904 21.3644ZM3.1533 20.9422C3.06982 20.9 2.86114 20.9422 2.77767 20.9C2.86114 20.9 2.86114 20.8578 2.90288 20.9C2.90288 20.8578 2.8194 20.8578 2.73593 20.8156C2.65246 20.8156 2.61072 20.7733 2.65246 20.6467C2.65246 20.6467 2.65246 20.6889 2.69419 20.6889C2.69419 20.6467 2.69419 20.6044 2.73593 20.5622C2.77767 20.5622 2.86114 20.5622 2.90288 20.5622C2.94461 20.6044 2.94461 20.6889 2.8194 20.6889C2.86114 20.7311 2.94461 20.7311 2.94461 20.6889C2.94461 20.6889 2.98635 20.7311 2.94461 20.7733C2.90288 20.8578 2.98635 20.8578 2.98635 20.8578C3.11156 20.8156 3.1533 20.8156 3.23677 20.7733H3.27851C3.23677 20.8156 3.19503 20.8156 3.19503 20.8578C3.19503 20.8578 3.1533 20.8578 3.11156 20.8578C3.11156 20.8578 3.11156 20.8578 3.1533 20.9C3.23677 20.9 3.19503 20.9422 3.1533 20.9422Z"
+                            fill="#60BDCA" />
+                    </svg>
+                    <div class="registry-desription">
+                        <span>Мы в реестре туроператоров</span><br>
+                        <a class="rto" href="#">РТО 019135</a>&nbsp;&nbsp;<a class="rto" href="#">РТО 021629</a>
+                    </div>
+                </div>
+                <form action="" class="search">
+                    <input type="search">
+                </form>
             </div>
         </aside>
         <header class="main-header container-fluid">
@@ -210,64 +318,57 @@
                     <a href="#">Санкт-Петербург</a>
                 </span>
             </div>
-            <label for="menu1" class="menu-label">
+            <label for="top-menu" class="menu-label">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="17.5" cy="17.5" r="17.5" fill="#00475D" />
+                        <rect x="10" y="10" width="16" height="16" fill="#00475D" />
+                        <path d="M11.9998 18H23.9998" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.9998 14H23.9998" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.9998 22H23.9998" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </button>
             </label>
-            <input type="checkbox" id="menu1">
-            <ul class="menu">
+            <input type="checkbox" id="top-menu">
+            <ul class="top-menu">
                 <li>
-                    <a href="#" class="menu-txt">Главная</a>
+                    <a href="#" class="top-menu-txt">
+                        Главная
+                    </a>
+                    <ul class="top-sub-menu">
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 1</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#" class="menu-txt">Сервис и оплата</a>
+                    <a href="#" class="top-menu-txt">Сервис и оплата</a>
                 </li>
                 <li>
-                    <a href="#" class="menu-txt">Компания</a>
+                    <a href="#" class="top-menu-txt">Компания</a>
                 </li>
                 <li>
-                    <a href="#" class="menu-txt">Агентствам</a>
+                    <a href="#" class="top-menu-txt">Агентствам</a>
                 </li>
                 <li>
-                    <a href="#" class="menu-txt">Контакты</a>
+                    <a href="#" class="top-menu-txt">Контакты</a>
                 </li>
             </ul>
-            <!--
-            <nav class="navbar navbar-expand-lg">
-                <a href="" class="navbar-brand">Brand</a>
-                <button class="navbar-toggle" type="button" data-toggle="collapse"
-                    data-target="#navbarScanTourContent" aria-controls="navbarScanTourContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScanTourContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a href="#" class="nav-link"></a>
-                        </li>
-                        <li><a class="nav-link" href="#">Главная</a></li>
-                        <li><a class="nav-link" href="#">Сервис и оплата</a></li>
-                        <li><a class="nav-link" href="#">Компания</a></li>
-                        <li><a class="nav-link" href="#">Агентствам</a></li>
-                        <li><a class="nav-link" href="#">Контакты</a></li>
-                    </ul>
-                </div>
-            </nav>-->
             <div class="phone">
                 <span class="phone-label">Бесплатно по РФ</span>
                 <div class="phone-number">
                     <span>8(800) 555 64 63</span>
-                    <img src="./img/vector.svg " alt="Позвонить">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="#828282" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
             </div>
             <div class="login ">
                 <a href="# ">Вход</a> | <a href="# ">Регистрация</a>
             </div>
+
         </header>
         <main class="container-fluid row main-row">
             <section class="main-content">
@@ -329,28 +430,36 @@
                 <div class="row main-content__image-row">
                     <div class="col-xl-4 col-md-10">
                         <div class="main-content__image-row__because">
-                            <img src="./img/ruskela3.png" alt="ruskela" width="91">
+                            <img src="./img/ruskela.png" alt="ruskela" width="91">
                             <img src="./img/gerb.png" alt="gerb" width="98">
-                            <div>
+                            <div class="main-content__image-row__because__text">
                                 <span>
-                                    Более <span class="main-content__image-row__because__count">150 000</span>туристов
+                                    Более <span class="main-content__image-row__because__count">150 000</span><br>
+                                    туристов <br>
                                     уже путешествуют с нами
                                 </span>
-                                <a class="main-content__because__link" href="#">
+                                <a class="main-content__image-row__because__link" href="#">
                                     Почему нас выбирают
-                                    <img src="./img/details.svg" alt="Узнать подробнее">
+                                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.3986 8.70711C18.7891 8.31658 18.7891 7.68342 18.3986 7.29289L12.0346 0.928932C11.6441 0.538408 11.011 0.538408 10.6204 0.928932C10.2299 1.31946 10.2299 1.95262 10.6204 2.34315L16.2773 8L10.6204 13.6569C10.2299 14.0474 10.2299 14.6805 10.6204 15.0711C11.011 15.4616 11.6441 15.4616 12.0346 15.0711L18.3986 8.70711ZM0 9H17.6915V7H0V9Z" />
+                                    </svg>
+
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-5">
                         <div class="hotel-image">
-                            <a href="https://www.tripadvisor.ru/">
-                                <img src="./img/advisor.png" alt="advisor" width="54">
-                            </a>
-                            <a href="https://www.booking.com/">
-                                <img src="./img/booking.png" alt="booking" width="103">
-                            </a>
+                            <div class="brands">
+                                <a href="https://www.tripadvisor.ru/">
+                                    <img src="./img/advisor.png" alt="advisor" width="54">
+                                </a>
+                                <a href="https://www.booking.com/">
+                                    <img src="./img/booking.png" alt="booking" width="103">
+                                </a>
+                            </div>
                             <span class="main-text">Размещение в лучших отелях рейтинги 5+ от Booking</span>
                         </div>
                     </div>
@@ -371,7 +480,7 @@
                         </li>
                         <li class="nav-item col-xl-2">
                             <a data-toggle="tab" href="#hotTours">
-                                🔥 Горящие туры
+                                &#128293; Горящие туры
                             </a>
                         </li>
                         <li class="nav-item col-xl-3">
@@ -950,10 +1059,10 @@
                 <div class="main-content__events">
                     <ul class="row">
                         <li class="col-xl-4">
-                           <span class="scantour-events-title">События и мероприятия СканТур</span>
+                            <span class="scantour-events-title">События и мероприятия СканТур</span>
                         </li>
                         <li class="col-xl-2">
-                           <span class="digest">Подпишись на еженедельный дайджест и получай скидки</span>
+                            <span class="digest">Подпишись на еженедельный дайджест и получай скидки</span>
                         </li>
                         <li class="col-xl-3">
                             <a href="#" class="red-button">Подписаться</a>
@@ -963,9 +1072,9 @@
                     <div class="tab-content list-cards">
                         <div class="tab-pane active">
                             <div class="row">
-                                <div class="col-xl-3 col-md-5">
+                                <div class="col-xl-3">
                                     <div class="item">
-                                        <div class="top-image"></div>
+                                        <div class="image-content"></div>
                                         <div class="events-text-content">
                                             <a class="heart" href="#">
                                                 <img src="./img/heart.svg" alt="heart" width="20">
@@ -976,395 +1085,45 @@
                                             </span>
                                             <a class="event-title" href="#">
                                                 Разыгрываем тур в Карелию совместно с “ТаксовичкоФ”
-                                            </a>                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-5">
-                                    <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
                                             </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-5">
+                                <div class="col-xl-3">
                                     <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                        <div class="image-content"></div>
+                                        <div class="events-text-content">
+                                            <a class="heart" href="#">
+                                                <img src="./img/heart.svg" alt="heart" width="20">
                                             </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
+                                            <span class="news">новость</span>
+                                            <span class="event-date">
+                                                05.02.2020
+                                            </span>
+                                            <a class="event-title" href="#">
+                                                Разыгрываем тур в Карелию совместно с “ТаксовичкоФ”
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-1 col-md-5">
-                                    <a class=" goto-link" href="#">
-                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
-                                                stroke="#F0F4FA" />
-                                            <path
-                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
-                                                fill="#5488C7" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane " id="hotTours">
-                            <div class="row">
-                                <div class="col-xl-3 col-md-5">
+                                <div class="col-xl-3">
                                     <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
+                                        <div class="image-content"></div>
+                                        <div class="events-text-content">
+                                            <a class="heart" href="#">
+                                                <img src="./img/heart.svg" alt="heart" width="20">
                                             </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
+                                            <span class="news">новость</span>
+                                            <span class="event-date">
+                                                05.02.2020
+                                            </span>
+                                            <a class="event-title" href="#">
+                                                Разыгрываем тур в Карелию совместно с “ТаксовичкоФ”
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-5">
-                                    <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
-                                            </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-5">
-                                    <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
-                                            </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-1 col-md-5">
-                                    <a class=" goto-link" href="#">
-                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
-                                                stroke="#F0F4FA" />
-                                            <path
-                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
-                                                fill="#5488C7" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane " id="eventTours">
-                            <div class="row">
-                                <div class="col-xl-3 col-md-5">
-                                    <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
-                                            </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-5">
-                                    <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
-                                            </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-5">
-                                    <div class="item">
-                                        <div class="top-image"></div>
-                                        <div class="text-content">
-                                            <div class="first">
-                                                <div class="market">
-                                                    <span class="discount">
-                                                        -20%
-                                                    </span>
-                                                    <span class="hit">
-                                                        HIT
-                                                    </span>
-                                                    <span class="additional-discount">
-                                                        <span>-5%&nbsp;</span><span class="destination">агенствам</span>
-                                                    </span>
-
-                                                </div>
-                                                <a class="heart" href="#">
-                                                    <img src="./img/heart.svg" alt="heart" width="20">
-                                                </a>
-                                                <span class="duration">
-                                                    1&nbsp;день
-                                                </span>
-                                                <span class="date-of-departure">
-                                                    Выезд: с 15.02.2020
-                                                </span>
-                                            </div>
-                                            <a class="main-title" href="#">
-                                                Рускеала и Подземный космос. <br> Ранний выезд
-                                            </a>
-                                            <div class="price">
-                                                <span class="discount-price">
-                                                    2200&nbsp;₽
-                                                </span>
-                                                <span class="per-person">
-                                                    |&nbsp;&nbsp;&nbsp;1&nbsp;чел
-                                                </span>
-                                                <span class="old-price">
-                                                    2800&nbsp;₽
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-1 col-md-5">
+                                <div class="col-xl-1">
                                     <a class=" goto-link" href="#">
                                         <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1380,11 +1139,52 @@
                         </div>
                     </div>
                 </div>
+                <div class="main-content__give-tour">
+                    <img src="./img/present.png" alt="present" class="present" width="153">
+                    <img src="./img/obscure.png" alt="obscure" class="obscure" width="153">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-12 main-content__give-tour__text-content">
+                            Подари тур своим близким
+                        </div>
+                        <div class="col-xl-5 col-md-12">
+                            <a href="#" class="red-button">Подарить тур</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content__reviews">
+                    <div class="row">
+                        <div class="col-xl-3">
+                           <!--<div class="main-content__reviews__card">--> 
+                                <img src="./img/image.png" alt="" width="90%">
+                           <!-- </div>--> 
+                        </div>
+                        <div class="col-xl-3 col-md-5">
+                            <img src="./img/image.png" alt="" width="90%">
+                            
 
+                        </div>
+                        <div class="col-xl-3 col-md-5">
+                            <img src="./img/image.png" alt="" width="90%">
+
+
+                        </div>
+                        <div class="col-xl-1">
+                            <a class=" goto-link" href="#">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white" stroke="#F0F4FA" />
+                                    <path
+                                        d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                        fill="#5488C7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
             </section>
         </main>
+
     </div>
-    <footer class="main-footer row">
+    <footer class="main-footer">
         <aside class="main-footer__left">
             <ul class="main-footer__left-copyright">
                 <li><a href="" class="main-footer__left-copyright__item">&copy; 2020 ООО "СканТур"</a></li>
@@ -1401,7 +1201,7 @@
                 <a href="#" class="main-footer__left-paymant__card"><img src="./img/visa.svg" alt="visa"></a>
             </section>
         </aside>
-        <div class="col-md-10">
+        <div class="col-md-10 main-footer__right">
             <section class="main-footer-contact row">
                 <div class="main-footer-contact__phone col-md-3">
                     <span>8(800) 555 64 63</span>
@@ -1431,13 +1231,63 @@
                     </a>
                 </div>
             </section>
+            <section class="main-footer-links row">
+                <div class="col-xl-3 main-footer-links__column">
+                    <span class="main-footer-links__column__header">Компания</span>
+                    <ul class="main-footer-links__column__list">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Достопримечательности</a></li>
+                        <li><a href="#">Лицензии и награды</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 main-footer-links__column">
+                    <span class="main-footer-links__column__header">Сервис и оплата</span>
+                    <ul class="main-footer-links__column__list">
+                        <li><a href="#">Наши Гиды</a></li>
+                        <li><a href="#">Автобусы</a></li>
+                        <li><a href="#">Отели</a></li>
+                        <li><a href="#">Подарочные карты</a></li>
+                        <li><a href="#">Как оплатить тур</a></li>
+                        <li><a href="#">Как отменить тур</a></li>
+                        <li><a href="#">Соответствие качества</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 main-footer-links__column">
+                    <span class="main-footer-links__column__header">Сотрудничество</span>
+                    <ul class="main-footer-links__column__list">
+                        <li><a href="#">Условия сотрудничества</a></li>
+                        <li><a href="#">Обучающие материалы</a></li>
+                        <li><a href="#">Бонусная программа</a></li>
+                        <li><a href="#">Спецпредложения</a></li>
+                        <li><a href="#">Календарь событий</a></li>
+                        <li><a href="#">Контакты для агенств</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 main-footer-links__column">
+                    <span class="main-footer-links__column__header">Контакты</span>
+                    <div class="main-footer-links__column__contacts">
+                        <span>Офис в Санкт-Петербурге</span>
+                        <span class="address">ст. метро “пл. Александра Невского” д. 2-E, БЦ Москва, 8 этаж, офис
+                            806</span>
+                        <a href="#">Как проехать?</a>
+                    </div>
+                    <div class="main-footer-links__column__contacts">
+                        <span>Офис в Карелии</span>
+                        <span class="address">г. Петрозаводск, ул. Свердлова, 18</span>
+                        <a href="#">Как проехать?</a>
+                    </div>
+                </div>
+            </section>
             <section class="main-footer-setificate">
                 <img src="./img/ssl.svg" alt="ssl">
                 Ваши данные в безопасности. Технологии шифрования COMODO SSL Certificate
             </section>
         </div>
     </footer>
-
 </body>
 <script type="text/javascript" async src="./js/menu.js"></script>
 
