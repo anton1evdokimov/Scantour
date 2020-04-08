@@ -1,6 +1,6 @@
 var list = document.querySelectorAll('.left-menu__nav__location');
 for (var i = 0; i < list.length; i++) {
-    list[i].addEventListener('click', function(event) {
+    list[i].addEventListener('click', function (event) {
         var e = event.currentTarget;
         if (e.classList.contains('minus')) {
             e.classList.add('plus');
@@ -17,11 +17,18 @@ for (var i = 0; i < list.length; i++) {
 var nav = document.querySelector('.top-menu');
 nav.addEventListener('click', function (event) {
     var t = event.target;
-    var subMenu = t.nextSibling;
     if (t.classList.contains('top-menu-txt')) {
-        if (subMenu.style.display === 'none'){
+        var subMenu = t.querySelector('.top-sub-menu');
+
+        if (subMenu.style.display !== 'flex') {
             subMenu.style.display = 'flex';
         }
         else subMenu.style.display = 'none';
+    }
+});
+nav.addEventListener('mouseleave', function () {
+    var list = nav.querySelectorAll('.top-sub-menu');
+    for (var i = 0; i < list.length; i++) {
+        list[i].style.display = 'none';
     }
 })

@@ -296,6 +296,7 @@ body {
     }
   }
   .search {
+    clear: both;
     margin-left: 12px;
     margin-right: 12px;
     input[type="search"] {
@@ -316,6 +317,10 @@ body {
       background-color: white;
       transition: width 1s ease-out;
       background-position: right;
+      -webkit-transition: width 1s ease-out;
+      -moz-transition: width 1s ease-out;
+      -ms-transition: width 1s ease-out;
+      -o-transition: width 1s ease-out;
     }
   }
 }
@@ -347,10 +352,12 @@ body {
     margin-bottom: 0;
     list-style-type: none;
     min-width: 500px;
-    align-items: center;
     li {
       margin-right: 59px;
       a {
+        height: 100%;
+        display: flex;
+        align-items: center;
         font-weight: 600;
         font-size: 15px;
         line-height: 20px;
@@ -387,7 +394,8 @@ body {
     color: #5488c7;
     background: #f0f4fa;
   }
-  a.top-menu-txt {
+  .top-menu-txt {
+    cursor: pointer;
     min-width: 40px;
     margin: 0 4.5px;
     display: flex;
@@ -399,7 +407,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
-  } 
+  }
 
   #top-menu {
     display: none;
@@ -525,9 +533,7 @@ body {
 }
 
 .main-row {
-  position: relative;
-  top: $height-header;
-  margin: 0;
+  margin: $height-header 0 0;
   z-index: 0;
   padding-left: 29px;
   max-width: 1544px;
@@ -1200,7 +1206,7 @@ body {
       padding: 28px;
       background-color: #f0f4fa;
       border: 1px solid #f0f4fa;
-      margin: 30px 0 117px;
+      margin: 30px 0 17px;
       position: relative;
       overflow: hidden;
       min-height: 105px;
@@ -1237,31 +1243,26 @@ body {
       }
     }
     &__reviews {
-      height: 248px;
+      margin: 100px 0 18px;
       &__card {
         min-height: 224px;
-        &__header{
-          img{
-            border-radius: 50%; 
+        &__header {
+          img {
+            border-radius: 50%;
           }
-                 }
+        }
       }
     }
   }
 }
 
 .main-footer {
+  min-height: 572px;
   margin: 0;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  .col-md-9 {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
+
   &__left {
     min-width: $menu-width;
     max-width: $menu-width;
@@ -1308,7 +1309,11 @@ body {
     }
   }
   &__right {
-    padding-left: 30px;
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
   &-contact {
     padding-top: 14px;
