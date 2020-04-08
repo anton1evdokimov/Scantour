@@ -1,2 +1,2 @@
-# Scantour
-Scantour
+# https://github.com/anton1evdokimov/Scantour
+
