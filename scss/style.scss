@@ -34,6 +34,7 @@ body {
   line-height: 20px;
   letter-spacing: 0.01em;
   .red-button {
+    font-family: ssp-normal;
     width: 145px;
     height: 50px;
     letter-spacing: 0.09em;
@@ -523,7 +524,6 @@ body {
       color: white;
       text-align: center;
       text-decoration: none;
-      font-family: montserrat-light, Arial, sans-serif;
       font-size: 14px;
     }
     .cart {
@@ -572,7 +572,7 @@ body {
       flex-wrap: wrap;
     }
     .heading {
-      font-family: ssp-bold, Arial, sans-serif;
+      font-family: ssp-bold;
       font-size: 33px;
       line-height: 40px;
       color: #373737;
@@ -822,7 +822,7 @@ body {
         &__title {
           width: 200px;
           margin-bottom: 12px;
-          font-family: ssp-bold, Arial, sans-serif;
+          font-family: ssp-bold;
           font-size: 20px;
           line-height: 24px;
           color: #373737;
