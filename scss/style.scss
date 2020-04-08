@@ -8,10 +8,24 @@ $menu-width: 270px;
 }
 
 @font-face {
-  font-family: ssp-bold;
+  font-family: ssp-black;
   font-weight: 900;
   font-style: normal;
+  src: url("../fonts/sourcesanspro/SourceSansPro-Black.ttf");
+}
+
+@font-face {
+  font-family: ssp-bold;
+  font-weight: bold;
+  font-style: normal;
   src: url("../fonts/sourcesanspro/SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: ssp-600;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/sourcesanspro/SourceSansPro-SemiBold.ttf");
 }
 
 @font-face {
@@ -34,26 +48,27 @@ body {
   line-height: 20px;
   letter-spacing: 0.01em;
   .red-button {
-    font-family: ssp-normal;
+    font-family: ssp-600;
     width: 145px;
     height: 50px;
     letter-spacing: 0.09em;
     box-shadow: 0px 5px 9px rgba(255, 83, 83, 0.35);
-    background: #df391c;
-    border-radius: 5px;
-    font-weight: 600;
+    background: #df391c;    
     font-size: 14px;
     line-height: 18px;
     align-items: center;
     color: #ffffff;
     display: inline-flex;
     justify-content: center;
-
     border-color: #df391c;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
     &:hover {
       opacity: 0.89;
       text-decoration: none;
-      color: black;
     }
   }
 
@@ -135,7 +150,7 @@ body {
       }
       list-style: none;
       padding: 15px 0 15px $padding-left;
-      font-weight: 600;
+      font-family: ssp-600;
       font-size: 17px;
       color: #ffffff;
       &__header {
@@ -179,7 +194,7 @@ body {
   &__calendar-header {
     padding-top: 40px;
     padding-bottom: 30px;
-    font-weight: 600;
+    font-family: ssp-600;
     font-size: 16px;
     line-height: 23px;
     color: #ffffff;
@@ -241,7 +256,7 @@ body {
           }
         }
         .day-of-week {
-          font-weight: 600;
+          font-family: ssp-600;
           font-size: 12px;
           line-height: 18px;
           color: #60bdca;
@@ -252,7 +267,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 14px;
         line-height: 18px;
         color: #ffffff;
@@ -285,10 +300,10 @@ body {
     }
     .registry-desription {
       float: right;
-      font-weight: 600;
+      font-family: ssp-600;
       font-size: 14px;
       line-height: 22px;
-      color: rgb(161, 166, 167);
+      color: #DFFBFF;;
     }
     .rto {
       font-size: 14px;
@@ -359,7 +374,7 @@ body {
         height: 100%;
         display: flex;
         align-items: center;
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 15px;
         line-height: 20px;
         letter-spacing: 0.01em;
@@ -387,10 +402,11 @@ body {
     height: 100%;
     li {
       height: 100%;
+      padding: 0  4.5%;
     }
   }
   .top-menu-txt:hover {
-    font-weight: 600;
+    font-family: ssp-600;
     font-size: 16px;
     color: #5488c7;
     background: #f0f4fa;
@@ -398,7 +414,7 @@ body {
   .top-menu-txt {
     cursor: pointer;
     min-width: 40px;
-    margin: 0 4.5px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -406,7 +422,7 @@ body {
     height: 100%;
     color: #4f4f4f;
     text-decoration: none;
-    font-weight: 600;
+    font-family: ssp-600;
     font-size: 16px;
   }
 
@@ -426,7 +442,7 @@ body {
         display: flex;
         align-items: center;
         height: $height-header;
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 16px;
         line-height: inherit;
         color: #333333;
@@ -468,7 +484,7 @@ body {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      font-family: sourcesanspro-bold;
+      font-family: ssp-bold;
       font-size: 16px;
       line-height: inherit;
       color: #333333;
@@ -576,6 +592,7 @@ body {
       line-height: 40px;
       color: #373737;
       width: 972px;
+      font-weight: bold;
     }
     &__first-row {
       margin-top: 30px;
@@ -657,9 +674,8 @@ body {
           justify-content: flex-end;
           align-items: center;
           span {
-            font-family: ssp-bold;
+            font-family: ssp-black;
             width: 170px;
-            font-weight: 900;
             font-size: 20px;
             line-height: 30px;
             text-align: center;
@@ -692,7 +708,7 @@ body {
         justify-content: space-between;
         align-items: flex-end;
         .main-text {
-          font-family: ssp-bold;
+          font-family: ssp-black;
           font-size: 20px;
           line-height: inherit;
           text-transform: uppercase;
@@ -728,7 +744,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 18px;
         color: #05050a;
         &__text {
@@ -786,7 +802,7 @@ body {
       .autobus-image {
         background-position: 0 79%;
         &__title {
-          font-weight: 600;
+          font-family: ssp-600;
           font-size: 18px;
           color: #05050a;
           width: 153px;
@@ -834,7 +850,7 @@ body {
     &__right-column {
       display: flex;
       flex-direction: column;
-      font-weight: 600;
+      font-family: ssp-600;
       font-size: 16px;
       line-height: 30px;
       &__item {
@@ -950,7 +966,7 @@ body {
                   .additional-discount,
                   .hit {
                     //display: inline-block;
-                    font-weight: 600;
+                    font-family: ssp-600;
                     font-size: 15px;
                     line-height: 10px;
                     text-align: center;
@@ -976,7 +992,7 @@ body {
                 .duration {
                   background-color: #f0f4fa;
                   border-radius: 5px;
-                  font-weight: 600;
+                  font-family: ssp-600;
                   font-size: 12px;
                   line-height: 18px;
                   text-align: center;
@@ -1012,7 +1028,7 @@ body {
                 }
               }
               .main-title {
-                font-weight: 600;
+                font-family: ssp-600;
                 font-size: 17px;
                 color: #4f4f4f;
               }
@@ -1071,7 +1087,7 @@ body {
             right: 8%;
           }
           .name {
-            font-weight: 600;
+            font-family: ssp-600;
             font-size: 17px;
             line-height: 22px;
             text-align: center;
@@ -1116,7 +1132,7 @@ body {
               margin-bottom: 30px;
             }
             .employee-name {
-              font-weight: 600;
+              font-family: ssp-600;
               font-size: 17px;
               line-height: 22px;
               text-align: center;
@@ -1198,7 +1214,7 @@ body {
           .event-title {
             width: 250px;
             max-width: 100%;
-            font-weight: 600;
+            font-family: ssp-600;
             font-size: 17px;
             line-height: 25px;
             color: #333;
@@ -1284,7 +1300,7 @@ body {
         font-size: 15px;
         color: #60bdca;
         &:hover {
-          color: #23527c;
+          color: #fff;
         }
       }
     }
@@ -1334,7 +1350,7 @@ body {
       padding-left: 0;
       flex-direction: column;
       span:first-child {
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 20px;
         line-height: 22px;
         color: #373737;
@@ -1349,7 +1365,7 @@ body {
       display: flex;
       flex-direction: column;
       span:first-child {
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 18px;
         color: #373737;
       }
@@ -1372,7 +1388,7 @@ body {
     &__column {
       &__header {
         display: inline-block;
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 18px;
         line-height: 22px;
         color: #4f4f4f;
@@ -1384,7 +1400,7 @@ body {
         margin-bottom: 40px;
         display: flex;
         flex-direction: column;
-        font-weight: 600;
+        font-family: ssp-600;
         font-size: 16px;
         line-height: 22px;
         color: #4f4f4f;

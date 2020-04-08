@@ -27,7 +27,7 @@ nav.addEventListener('click', function (event) {
         else subMenu.style.display = 'none';
     }
 });
-nav.addEventListener('mouseleave', close());
+nav.addEventListener('mouseleave', close);
 
 function close() {
     var list = nav.querySelectorAll('.top-sub-menu');
