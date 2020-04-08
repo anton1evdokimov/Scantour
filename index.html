@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="./js/jquery-3.4.1.min.js"></script>
+    <script defer type="text/javascript" src="./js/menu.js"></script>
+
     <!-- Подключаем Bootstrap JS -->
     <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
@@ -305,7 +307,7 @@
                         <a class="rto" href="#">РТО 019135</a>&nbsp;&nbsp;<a class="rto" href="#">РТО 021629</a>
                     </div>
                 </div>
-                <form action="" class="search">
+                <form action="/" class="search">
                     <input type="search">
                 </form>
             </div>
@@ -318,18 +320,7 @@
                     <a href="#">Санкт-Петербург</a>
                 </span>
             </div>
-            <label for="top-menu" class="menu-label">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="17.5" cy="17.5" r="17.5" fill="#00475D" />
-                        <rect x="10" y="10" width="16" height="16" fill="#00475D" />
-                        <path d="M11.9998 18H23.9998" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11.9998 14H23.9998" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11.9998 22H23.9998" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </label>
-            <input type="checkbox" id="top-menu">
+
             <ul class="top-menu">
                 <li>
                     <div class="top-menu-txt">
@@ -341,7 +332,7 @@
                             <li><a href="#">Пункт 1</a></li>
                             <li><a href="#">Пункт 1</a></li>
                         </ul>
-                    </div>                    
+                    </div>
                 </li>
                 <li>
                     <div class="top-menu-txt">
@@ -358,7 +349,7 @@
                     </div>
                 </li>
                 <li>
-                    <div href="#" class="top-menu-txt">
+                    <div class="top-menu-txt">
                         Компания
                         <ul class="top-sub-menu">
                             <li><a href="#">Пункт 1</a></li>
@@ -527,7 +518,9 @@
                                 Событийные туры
                             </a>
                         </li>
-                        <a class="col-xl-2 goto-from-ul" href="#popularDiscountedTours">Перейти в каталог туров</a>
+                        <li class="col-xl-2 li-link">
+                            <a class="goto-from-ul" href="#popularDiscountedTours">Перейти в каталог туров</a>
+                        </li>
                     </ul>
                     <div class="tab-content list-cards">
                         <div class="tab-pane active" id="popularDiscountedTours">
@@ -977,7 +970,7 @@
                     </div>
                 </div>
                 <div class="main-content__our-faces">
-                    <ul class="nav nav-tabs row" id="tours-tab">
+                    <ul class="nav nav-tabs row">
                         <li class="col-xl-3 our-pride-in-faces">Наша гордость в лицах</li>
                         <li class="nav-item col-xl-1">
                             <a data-toggle="tab" href="#guids" class="active">
@@ -1001,7 +994,7 @@
                     <div class="tab-content list-cards">
                         <div class="tab-pane active" id="guids">
                             <div class="row">
-                                <div class="col-xl-2 col-md-5">
+                                <div class="col-xl-2">
                                     <div class="item">
                                         <img src="./img/heart.svg" alt="heart" class="heart" width="20">
                                         <img src="./img/guides_kruglov.png" alt="guides" width="120">
@@ -1020,7 +1013,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-2 col-md-5">
+                                <div class="col-xl-2">
                                     <div class="item">
                                         <img src="./img/heart.svg" alt="heart" class="heart" width="20">
                                         <img src="./img/guides_kruglov.png" alt="guides" width="120">
@@ -1039,7 +1032,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-2 col-md-5">
+                                <div class="col-xl-2">
                                     <div class="item">
                                         <img src="./img/heart.svg" alt="heart" class="heart" width="20">
                                         <img src="./img/guides_kruglov.png" alt="guides" width="120">
@@ -1059,7 +1052,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-3 col-md-9">
+                                <div class="col-xl-3">
                                     <div class="item best-employee">
                                         <img src="./img/best-employee.png" alt="" width="113">
                                         <div class="best-employee__text">
@@ -1073,7 +1066,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-1 col-md-1">
+                                <div class="col-xl-1">
                                     <a class=" goto-link" href="#">
                                         <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1088,10 +1081,180 @@
                             </div>
                         </div>
                         <div class="tab-pane " id="managers">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/heart.svg" alt="heart" class="heart" width="20">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>4,7</span>
+                                            </div>
+                                            <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/heart.svg" alt="heart" class="heart" width="20">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>4,7</span>
+                                            </div>
+                                            <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/heart.svg" alt="heart" class="heart" width="20">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>4,7</span>
+                                            </div>
+                                            <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="col-xl-3">
+                                    <div class="item best-employee">
+                                        <img src="./img/best-employee.png" alt="" width="113">
+                                        <div class="best-employee__text">
+                                            <span class="title">Сотрудник месяца</span>
+                                            <a class="employee-name" href="#">Екатерина Тюнина</a>
+                                            <span class="profession">Специалист по контролю качества</span>
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>5,2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1">
+                                    <a class=" goto-link" href="#">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
+                                                stroke="#F0F4FA" />
+                                            <path
+                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                                fill="#5488C7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane " id="quality-department">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/heart.svg" alt="heart" class="heart" width="20">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>4,7</span>
+                                            </div>
+                                            <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/heart.svg" alt="heart" class="heart" width="20">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>4,7</span>
+                                            </div>
+                                            <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <div class="item">
+                                        <img src="./img/heart.svg" alt="heart" class="heart" width="20">
+                                        <img src="./img/guides_kruglov.png" alt="guides" width="120">
+                                        <a class="name" href="#">
+                                            Никита Круглов
+                                        </a>
+                                        <span class="experience">
+                                            стаж гида 11 лет
+                                        </span>
+                                        <div class="comment">
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>4,7</span>
+                                            </div>
+                                            <a class="comments-count" href="#">85 отзывов</a>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="col-xl-3">
+                                    <div class="item best-employee">
+                                        <img src="./img/best-employee.png" alt="" width="113">
+                                        <div class="best-employee__text">
+                                            <span class="title">Сотрудник месяца</span>
+                                            <a class="employee-name" href="#">Екатерина Тюнина</a>
+                                            <span class="profession">Специалист по контролю качества</span>
+                                            <div class="star">
+                                                <img src="./img/star.svg" alt="star">
+                                                <span>5,2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1">
+                                    <a class=" goto-link" href="#">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle r="21.5" transform="matrix(1 0 0 -1 22 22)" fill="white"
+                                                stroke="#F0F4FA" />
+                                            <path
+                                                d="M29.3986 21.2929C29.7891 21.6834 29.7891 22.3166 29.3986 22.7071L23.0346 29.0711C22.6441 29.4616 22.011 29.4616 21.6204 29.0711C21.2299 28.6805 21.2299 28.0474 21.6204 27.6569L27.2773 22L21.6204 16.3431C21.2299 15.9526 21.2299 15.3195 21.6204 14.9289C22.011 14.5384 22.6441 14.5384 23.0346 14.9289L29.3986 21.2929ZM15 21H28.6915V23H15V21Z"
+                                                fill="#5488C7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1103,10 +1266,12 @@
                         <li class="col-xl-2">
                             <span class="digest">Подпишись на еженедельный дайджест и получай скидки</span>
                         </li>
-                        <li class="col-xl-3">
+                        <li class="col-xl-2">
                             <a href="#" class="red-button">Подписаться</a>
                         </li>
-                        <a class="col-xl-1 goto-from-ul" href="#">Все новости</a>
+                        <li class="col-xl-2 li-link">
+                            <a class="goto-from-ul" href="#">Все новости</a>
+                        </li>
                     </ul>
                     <div class="tab-content list-cards">
                         <div class="tab-pane active">
@@ -1193,19 +1358,13 @@
                 <div class="main-content__reviews">
                     <div class="row">
                         <div class="col-xl-3">
-                           <!--<div class="main-content__reviews__card">--> 
-                                <img src="./img/image.png" alt="" width="90%">
-                           <!-- </div>--> 
+                            <img src="./img/image.png" alt="">
                         </div>
                         <div class="col-xl-3 col-md-5">
-                            <img src="./img/image.png" alt="" width="90%">
-                            
-
+                            <img src="./img/image.png" alt="">
                         </div>
                         <div class="col-xl-3 col-md-5">
-                            <img src="./img/image.png" alt="" width="90%">
-
-
+                            <img src="./img/image.png" alt="">
                         </div>
                         <div class="col-xl-1">
                             <a class=" goto-link" href="#">
@@ -1219,6 +1378,7 @@
                             </a>
                         </div>
                     </div>
+                </div>
             </section>
         </main>
 
@@ -1328,6 +1488,5 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" async src="./js/menu.js"></script>
 
 </html>

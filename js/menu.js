@@ -18,6 +18,7 @@ var nav = document.querySelector('.top-menu');
 nav.addEventListener('click', function (event) {
     var t = event.target;
     if (t.classList.contains('top-menu-txt')) {
+        close();
         var subMenu = t.querySelector('.top-sub-menu');
 
         if (subMenu.style.display !== 'flex') {
@@ -26,9 +27,11 @@ nav.addEventListener('click', function (event) {
         else subMenu.style.display = 'none';
     }
 });
-nav.addEventListener('mouseleave', function () {
+nav.addEventListener('mouseleave', close());
+
+function close() {
     var list = nav.querySelectorAll('.top-sub-menu');
     for (var i = 0; i < list.length; i++) {
         list[i].style.display = 'none';
     }
-})
+}

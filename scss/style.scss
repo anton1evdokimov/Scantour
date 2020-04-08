@@ -876,6 +876,11 @@ body {
     &__our-faces,
     &__events {
       min-width: 1053px;
+      .li-link{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
       .nav-tabs {
         margin: 19px 0 57px;
         border: none;
@@ -1244,6 +1249,9 @@ body {
     }
     &__reviews {
       margin: 100px 0 18px;
+      img{
+        width: 90%;
+      }
       &__card {
         min-height: 224px;
         &__header {
