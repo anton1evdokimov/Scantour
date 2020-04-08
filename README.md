@@ -1,2 +1,2 @@
-# anton1evdokimov.github.io
+# https://github.com/anton1evdokimov/Scantour
 
