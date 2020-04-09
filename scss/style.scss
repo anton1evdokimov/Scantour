@@ -1241,7 +1241,11 @@ body {
           background-size: 115%;
           background-position: center 20%;
           flex-direction: row;
-          padding: 55px 35px;
+          padding: 50px 25px;
+          .main-img{
+            min-width: 113px;
+            max-width: 113px;
+          }
           &__text {
             background-color: transparent;
             display: flex;
@@ -1249,6 +1253,7 @@ body {
             align-items: center;
             justify-content: space-between;
             .title {
+              max-width: 80%;
               font-weight: bold;
               font-size: 20px;
               line-height: 24px;
@@ -1267,6 +1272,7 @@ body {
             }
             .profession {
               font-size: 14px;
+              max-width: 80%;
               line-height: 18px;
               text-align: center;
               color: #828282;
