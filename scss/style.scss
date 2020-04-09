@@ -134,6 +134,9 @@ body {
   ::-webkit-scrollbar {
     width: 0 !important;
   }
+  scrollbar {
+    width: 0 !important;
+  }
   position: relative;
   position: fixed;
   left: 0;
@@ -158,9 +161,7 @@ body {
     -webkit-transition: opacity 1s ease-out;
     -moz-transition: opacity 1s ease-out;
     -ms-transition: opacity 1s ease-out;
-    -o-transition: opacity 1s ease-out;
-
-    
+    -o-transition: opacity 1s ease-out;    
   }
   .nav-tabs {
     border-bottom: none;
@@ -1234,6 +1235,7 @@ body {
           }
         }
         .best-employee {
+          min-width: 287px;
           background-image: url("../img/employee-of-the-month.png");
           background-size: 115%;
           background-position: center 20%;
@@ -1403,9 +1405,13 @@ body {
 }
 
 .main-footer {
-  min-height: 572px;
+  height: 572px;
   margin: 0;
   display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   align-items: flex-end;
   overflow: hidden;
   z-index: 50;
