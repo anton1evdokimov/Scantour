@@ -380,13 +380,14 @@ body {
     max-height: 70px;
     padding: 12px 12px 12px $padding-left;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #00475d;
     svg {
-      height: 100%;
+      height: 39px;
       margin-right: 2px;
     }
     .registry-desription {
+      height: 46px;
       float: right;
       font-family: ssp-600;
       font-size: 14px;
