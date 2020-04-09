@@ -47,13 +47,20 @@ body {
   font-family: ssp-normal;
   line-height: 20px;
   letter-spacing: 0.01em;
+  .round-link {
+    fill: #555;
+    cursor: pointer;
+  }
+  .round-link:hover {
+    fill: #0084ae;
+  }
   .red-button {
     font-family: ssp-600;
     width: 145px;
     height: 50px;
     letter-spacing: 0.09em;
     box-shadow: 0px 5px 9px rgba(255, 83, 83, 0.35);
-    background: #df391c;    
+    background: #df391c;
     font-size: 14px;
     line-height: 18px;
     align-items: center;
@@ -61,19 +68,31 @@ body {
     display: inline-flex;
     justify-content: center;
     border-color: #df391c;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -ms-border-radius:5px;
-    -o-border-radius:5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     &:hover {
-      opacity: 0.89;
       text-decoration: none;
+      color: #0084ae;
     }
   }
-
+  .heart {
+    cursor: pointer;
+    stroke: #8da5a8;
+  }
+  .heart:hover {
+    stroke: #0084ae;
+  }
   .page {
     display: flex;
+  }
+  a {
+    color: #555555;
+  }
+  a:hover {
+    color: #0084ae;
   }
 }
 
@@ -132,12 +151,17 @@ body {
   }
   &__header {
     border-bottom: 1px solid rgba(96, 189, 202, 0.28);
-    font-family: inherit;
-    padding: 40px 0 30px $padding-left;
-    font-size: 19px;
-    line-height: 30px;
-    color: #fff;
     max-width: $menu-width;
+    padding: 40px 0 30px $padding-left;
+    a {
+      font-family: inherit;
+      font-size: 19px;
+      line-height: 30px;
+      color: #fff;
+    }
+    a:hover {
+      color: #fff;
+    }
   }
 
   &__nav {
@@ -194,10 +218,15 @@ body {
   &__calendar-header {
     padding-top: 40px;
     padding-bottom: 30px;
-    font-family: ssp-600;
-    font-size: 16px;
-    line-height: 23px;
-    color: #ffffff;
+    a {
+      font-family: ssp-600;
+      font-size: 16px;
+      line-height: 23px;
+      color: #ffffff;
+    }
+    a:hover {
+      color: #fff;
+    }
   }
   &__grouped-by-region {
     &__block {
@@ -224,8 +253,13 @@ body {
         position: absolute;
         bottom: 0;
         right: 0;
+        svg path{
+          fill: #555555;
+        }
         &:hover {
-          opacity: 0.5;
+          svg path{
+            fill: #0084ae;
+          }
         }
       }
       &__calendar {
@@ -303,13 +337,18 @@ body {
       font-family: ssp-600;
       font-size: 14px;
       line-height: 22px;
-      color: #DFFBFF;;
+      color: #dffbff;
     }
     .rto {
       font-size: 14px;
       line-height: 22px;
       color: #60bdca;
     }
+  }
+  #search-button {
+    margin: 12px auto 0;
+    width: 70%;
+    display: none;
   }
   .search {
     clear: both;
@@ -402,7 +441,7 @@ body {
     height: 100%;
     li {
       height: 100%;
-      padding: 0  4.5%;
+      padding: 0 12px;
     }
   }
   .top-menu-txt:hover {
@@ -411,9 +450,11 @@ body {
     color: #5488c7;
     background: #f0f4fa;
   }
+  .large {
+    min-width: 125px;
+  }
   .top-menu-txt {
     cursor: pointer;
-    min-width: 40px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -471,11 +512,35 @@ body {
   }
 
   .phone {
+    position: relative;
     width: 130px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    #open-drop-down {
+      cursor: pointer;
+    }
+    .drop-down {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: inline-block;
+      height: 0;
+      transition: height 1s ease;
+      border: none;
+      background-color: white;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      -webkit-transition: height 1s ease;
+      -moz-transition: height 1s ease;
+      -ms-transition: height 1s ease;
+      -o-transition: height 1s ease;
+    }
     &-label {
       font-size: 13px;
       color: #828282;
@@ -566,13 +631,15 @@ body {
       align-items: center;
     }
     .goto-link:hover {
+      svg {
+        fill: #0084ae;
+      }
       background-color: rgb(220, 232, 250);
     }
     .goto-from-ul {
       font-size: 18px;
       line-height: 22px;
       text-align: center;
-      color: #5488c7;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -616,14 +683,10 @@ body {
           width: 100%;
           align-items: flex-end;
           justify-content: space-between;
-          .toggle-slider {
-            cursor: pointer;
+          .round-link {
             &:first-child {
               margin-right: 29px;
             }
-          }
-          .toggle-slider:hover {
-            opacity: 0.5;
           }
           &__description {
             width: 693px;
@@ -766,14 +829,13 @@ body {
         &__link {
           font-size: 16px;
           line-height: 126.39%;
-          color: #5488c7;
           display: flex;
           justify-content: space-between;
           svg {
-            fill: #5488c7;
+            fill: #555;
           }
           &:hover {
-            color: #1f3c5f;
+            color: #0084ae;
             svg {
               fill: #1f3c5f;
             }
@@ -905,6 +967,7 @@ body {
         padding-left: 0;
       }
       .nav-item a {
+        font-family: ssp-600;
         font-weight: 500;
         font-size: 28px;
         line-height: 36px;
@@ -913,7 +976,6 @@ body {
         &:hover,
         &.active {
           font-weight: bold;
-          font-size: 28px;
           line-height: 36px;
           color: #373737;
           text-decoration: none;
@@ -1047,7 +1109,7 @@ body {
     &__our-faces {
       margin: 18px 0 100px;
       .our-pride-in-faces {
-        font-weight: bold;
+        font-family: ssp-bold;
         font-size: 28px;
         line-height: 36px;
         color: #373737;
@@ -1060,7 +1122,16 @@ body {
         margin-right: 15px;
       }
       .nav-item {
-        text-transform: uppercase;
+        a {
+          text-transform: uppercase;
+          font-family: ssp-600;
+          font-size: 18px;
+        }
+        a:hover,
+        a.active {
+          font-size: 18px;
+          color: #0084ae;
+        }
       }
       .list-cards {
         height: 249px;
@@ -1378,9 +1449,25 @@ body {
     &__social {
       display: flex;
       justify-content: space-around;
-      &__link:hover {
-        text-decoration: none;
-        opacity: 0.7;
+      &__link {
+        svg {
+          fill: #5488c7;
+          &.facebook:hover {
+            fill: #0021cd;
+          }
+          &.vk:hover {
+            fill: #104fa4;
+          }
+          &.instagram:hover {
+            fill: #d80382;
+          }
+          &.youtube:hover {
+            fill: #ee0000;
+          }
+          &.ok:hover {
+            fill: #ff7a00;
+          }
+        }
       }
     }
   }
