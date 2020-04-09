@@ -100,15 +100,68 @@ body {
 * ::after {
   outline: none;
 }
+
 .left-menu {
+  ::-webkit-scrollbar-button {
+    background-image: url("");
+    background-repeat: no-repeat;
+    border-radius: 9px;
+    width: 15px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #e5f9ff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 12px;
+    background-color: #00394b;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #00394b;
+  }
+
+  ::-webkit-resizer {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 15px;
+    /*height:0px*/
+  }
+
+  ::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   background-color: #00394b;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: left;
-  position: relative;
+  height: 100vh;
   min-width: $menu-width;
   max-width: $menu-width;
+  #left-menu-block {
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -ms-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+
+    
+  }
   .nav-tabs {
     border-bottom: none;
 
@@ -253,11 +306,11 @@ body {
         position: absolute;
         bottom: 0;
         right: 0;
-        svg path{
+        svg path {
           fill: #555555;
         }
         &:hover {
-          svg path{
+          svg path {
             fill: #0084ae;
           }
         }
@@ -352,10 +405,9 @@ body {
   }
   .search {
     clear: both;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 33px 12px;
     input[type="search"] {
-      margin: 41px 40% 0;
+      margin: 8px 40%;
       width: 30px;
       height: 30px;
       outline: none;
@@ -613,7 +665,7 @@ body {
 }
 
 .main-row {
-  margin: $height-header 0 0;
+  margin: $height-header 0 0 $menu-width;
   z-index: 0;
   padding-left: 29px;
   max-width: 1544px;
@@ -1356,8 +1408,9 @@ body {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-
+  z-index: 50;
   &__left {
+    z-index: 100;
     min-width: $menu-width;
     max-width: $menu-width;
     padding-left: $padding-left;

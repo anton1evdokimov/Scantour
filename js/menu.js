@@ -39,7 +39,7 @@ function close() {
 var dropDown = document.querySelector('#phone-drop-down');
 var phone = document.querySelector('#phone-block');
 
-function closeDropDown(){
+function closeDropDown() {
     dropDown.style.height = "";
     dropDown.style.border = "none";
 }
@@ -63,4 +63,15 @@ search.addEventListener('focus', function () {
 search.addEventListener('blur', function () {
     searchButton.style.display = 'none';
     search.value = '';
-})
+});
+
+var footer = document.querySelector('#footer');
+var leftMenu = document.querySelector('#left-menu-block');
+window.addEventListener('scroll', function () {
+    if (footer.offsetTop < window.pageYOffset + document.documentElement.clientHeight) {
+        leftMenu.style.opacity = '0';
+    }
+    else{
+        leftMenu.style.opacity = '';
+    }
+});

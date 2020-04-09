@@ -18,7 +18,8 @@
 
 <body>
     <div class="page">
-        <aside class="left-menu">
+        <aside class="left-menu" >
+            <div id="left-menu-block">
             <ul class="nav nav-tabs" id="left-menu">
                 <li class="nav-item">
                     <a data-toggle="tab" href="#menu" class="active">
@@ -37,7 +38,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="tab-content left-menu">
+            <div class="tab-content">
                 <div class="tab-pane left-menu__calendar" id="calendar">
                     <div class="left-menu__calendar-header">
                         <a href="#">Ближайшие рейсы (12.05)</a>
@@ -346,6 +347,7 @@
                     <a href="#" class="red-button" id="search-button">Показать результаты</a>
                 </form>
             </div>
+        </div>
         </aside>
         <header class="main-header container-fluid">
             <a href="https://scantour.ru/"><img src="./img/logo.png" alt="СканТур" width="189" title="Главная"></a>
@@ -1491,7 +1493,7 @@
         </main>
 
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer" id="footer">
         <aside class="main-footer__left">
             <ul class="main-footer__left-copyright">
                 <li><a href="" class="main-footer__left-copyright__item">&copy; 2020 ООО "СканТур"</a></li>
